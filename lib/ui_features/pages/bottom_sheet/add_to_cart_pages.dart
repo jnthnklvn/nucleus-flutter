@@ -33,7 +33,7 @@ class AddToCartPages extends StatelessWidget {
                     margin: const EdgeInsets.only(right: 25, top: 45),
                     child: ButtonIconRounded(
                       icon: AssetPaths.iconClose,
-                      onTap: () {},
+                      onTap: Navigator.of(context).pop,
                       color: AssetColors.skyWhite,
                     ),
                   ),
@@ -68,31 +68,33 @@ class AddToCartPages extends StatelessWidget {
                   Expanded(
                     child: Container(
                       margin: const EdgeInsets.all(30),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'Nike React Infinity Run\nFlyknit 2',
-                            style: AssetStyles.t3.copyWith(
-                              height: 1.4,
+                      child: SingleChildScrollView(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Nike React Infinity Run\nFlyknit 2',
+                              style: AssetStyles.t3.copyWith(
+                                height: 1.4,
+                              ),
                             ),
-                          ),
-                          verticalSpace(15),
-                          const Text(
-                            '\$250.00 + Delivery & Tax',
-                            style: AssetStyles.labelSmReguler,
-                          ),
-                          verticalSpace(20),
-                          const CartDetail(
-                            title: 'Size',
-                            caption: 'M 10 / W 11.5',
-                          ),
-                          verticalSpace(20),
-                          const CartDetail(
-                            title: 'Color',
-                            caption: 'Gray',
-                          ),
-                        ],
+                            verticalSpace(15),
+                            const Text(
+                              '\$250.00 + Delivery & Tax',
+                              style: AssetStyles.labelSmReguler,
+                            ),
+                            verticalSpace(20),
+                            const CartDetail(
+                              title: 'Size',
+                              caption: 'M 10 / W 11.5',
+                            ),
+                            verticalSpace(20),
+                            const CartDetail(
+                              title: 'Color',
+                              caption: 'Gray',
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ),

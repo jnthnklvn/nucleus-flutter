@@ -72,7 +72,6 @@ class ModalConfirmationBody extends StatelessWidget {
                   style: AssetStyles.labelMdRegular,
                   textAlign: TextAlign.center,
                 ),
-
                 verticalSpace(40),
                 ButtonPrimary(
                   onTap: () {},
@@ -84,9 +83,8 @@ class ModalConfirmationBody extends StatelessWidget {
                 TextButtonCustom(
                   text: 'Cancel',
                   style: AssetStyles.labelMdRegular,
-                  onTap: () {},
+                  onTap: Navigator.of(context).pop,
                 ),
-                // verticalSpace(20),
               ],
             ),
           ),

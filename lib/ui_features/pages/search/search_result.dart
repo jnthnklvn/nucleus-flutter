@@ -66,7 +66,7 @@ class SearchResultPgaes extends StatelessWidget {
                   horizontalSpace(15),
                   TextButtonCustom(
                     text: 'Cancel',
-                    onTap: () {},
+                    onTap: Navigator.of(context).pop,
                   ),
                 ],
               ),

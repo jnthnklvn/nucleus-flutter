@@ -49,7 +49,7 @@ class ChatPages extends StatelessWidget {
     return Scaffold(
       appBar: AppBarSecondary(
         leading: TextButton(
-          onPressed: () {},
+          onPressed: Navigator.of(context).pop,
           child: SvgPicture.asset(
             AssetPaths.iconClose,
           ),
