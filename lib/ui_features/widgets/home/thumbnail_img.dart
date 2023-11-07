@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 
-import '../../../config/config.dart';
+import 'package:nucleus_ui_app/config/config.dart';
 
 class ThumbnailImg extends StatelessWidget {
   final double? width;
   final Widget? widget;
   const ThumbnailImg({
-    super.key,
-    required this.hits,
+    required this.hits, super.key,
     this.width,
     this.widget,
   });
@@ -28,7 +27,7 @@ class ThumbnailImg extends StatelessWidget {
                 child: Container(
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: AssetImage(hits["images"]!),
+                      image: AssetImage(hits['images']!),
                       fit: BoxFit.contain,
                     ),
                   ),
@@ -36,7 +35,7 @@ class ThumbnailImg extends StatelessWidget {
               ),
               verticalSpace(10),
               Text(
-                hits["title"]!,
+                hits['title']!,
                 style: AssetStyles.labelSmReguler
                     .copyWith(fontWeight: FontWeight.bold),
               ),

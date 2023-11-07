@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import '../../../config/config.dart';
+import 'package:nucleus_ui_app/config/config.dart';
 
 class CartDetail extends StatelessWidget {
-  String title;
-  String caption;
-  final Function()? onTap;
-  CartDetail(
-      {super.key, required this.title, required this.caption, this.onTap});
+  final String title;
+  final String caption;
+  final VoidCallback? onTap;
+  const CartDetail(
+      {required this.title, required this.caption, super.key, this.onTap});
 
   @override
   Widget build(BuildContext context) {

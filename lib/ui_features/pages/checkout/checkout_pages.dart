@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import '../../../ui_features/widgets/appbar/appbar_primary.dart';
-import '../../../config/config.dart';
-import '../../../ui_features/widgets/button_primary.dart';
-import '../../widgets/checkout/list_checkout.dart';
+import 'package:nucleus_ui_app/config/config.dart';
+import 'package:nucleus_ui_app/ui_features/widgets/appbar/appbar_primary.dart';
+import 'package:nucleus_ui_app/ui_features/widgets/button_primary.dart';
+import 'package:nucleus_ui_app/ui_features/widgets/checkout/list_checkout.dart';
 
 class CheckoutPages extends StatelessWidget {
   const CheckoutPages({super.key});
 
-  static const String checkoutPages = "checkoutPages";
+  static const String checkoutPages = 'checkoutPages';
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +24,7 @@ class CheckoutPages extends StatelessWidget {
           ),
           AppBarPrimary(
             iconColor: AssetColors.skyWhite,
-            text: "Checkout",
+            text: 'Checkout',
             textStyle: AssetStyles.labelLgRegular.copyWith(
               color: AssetColors.skyWhite,
             ),
@@ -55,18 +55,18 @@ class CheckoutPages extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               const Text(
-                                "Obvilion",
+                                'Obvilion',
                                 style: AssetStyles.t3,
                               ),
                               verticalSpace(15),
                               Text(
-                                "Wed, 20 Jan - 10:00 AM",
+                                'Wed, 20 Jan - 10:00 AM',
                                 style: AssetStyles.labelSmReguler.copyWith(
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
                               verticalSpace(5),
-                              Text("CMX Cinemas, New York",
+                              Text('CMX Cinemas, New York',
                                   style: AssetStyles.labelSmReguler.copyWith(
                                     color: AssetColors.inkLight,
                                   )),
@@ -77,23 +77,23 @@ class CheckoutPages extends StatelessWidget {
                       ),
                       verticalSpace(50),
                       const ListCheckout(
-                        leftText: "Movie ticket",
-                        rightText: "\$22.00",
+                        leftText: 'Movie ticket',
+                        rightText: '\$22.00',
                       ),
                       verticalSpace(20),
                       const ListCheckout(
-                        leftText: "Qty",
-                        rightText: "2",
+                        leftText: 'Qty',
+                        rightText: '2',
                       ),
                       verticalSpace(20),
                       const ListCheckout(
-                        leftText: "Convenience fees",
-                        rightText: "\$1.00",
+                        leftText: 'Convenience fees',
+                        rightText: '\$1.00',
                       ),
                       verticalSpace(20),
                       const ListCheckout(
-                        leftText: "Subtotal",
-                        rightText: "\$43.00",
+                        leftText: 'Subtotal',
+                        rightText: '\$43.00',
                       ),
                       verticalSpace(10),
                       const Divider(
@@ -101,8 +101,8 @@ class CheckoutPages extends StatelessWidget {
                       ),
                       verticalSpace(10),
                       ListCheckout(
-                        leftText: "Total amount",
-                        rightText: "\$43.00",
+                        leftText: 'Total amount',
+                        rightText: '\$43.00',
                         stlyeRightText: AssetStyles.labelMdRegular.copyWith(
                           fontWeight: FontWeight.bold,
                         ),
@@ -112,7 +112,7 @@ class CheckoutPages extends StatelessWidget {
                 ),
                 ButtonPrimary(
                   onTap: () {},
-                  text: "Pay . \$ 43.00",
+                  text: 'Pay . \$ 43.00',
                   width: screenWidth(context) * 0.9,
                 ),
                 verticalSpace(20),

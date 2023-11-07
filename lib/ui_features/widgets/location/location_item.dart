@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import '../../../config/config.dart';
-import '../../model/location_model.dart';
+import 'package:nucleus_ui_app/config/config.dart';
+import 'package:nucleus_ui_app/ui_features/model/location_model.dart';
 
 class LocationItem extends StatelessWidget {
   const LocationItem({
-    super.key,
-    required this.data,
+    required this.data, super.key,
   });
 
   final LocationModel data;

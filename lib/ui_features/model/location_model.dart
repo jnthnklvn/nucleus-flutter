@@ -6,7 +6,7 @@ import 'dart:convert';
 
 List<LocationModel> locationModelFromJson(String str) =>
     List<LocationModel>.from(
-        json.decode(str).map((x) => LocationModel.fromJson(x)));
+        json.decode(str).map(LocationModel.fromJson));
 
 String locationModelToJson(List<LocationModel> data) =>
     json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
@@ -21,12 +21,12 @@ class LocationModel {
   });
 
   factory LocationModel.fromJson(Map<String, dynamic> json) => LocationModel(
-        name: json["name"],
-        address: json["address"],
+        name: json['name'],
+        address: json['address'],
       );
 
   Map<String, dynamic> toJson() => {
-        "name": name,
-        "address": address,
+        'name': name,
+        'address': address,
       };
 }

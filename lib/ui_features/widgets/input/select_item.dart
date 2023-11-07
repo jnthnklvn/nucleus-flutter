@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../../config/config.dart';
+import 'package:nucleus_ui_app/config/config.dart';
 
 class SelectItem extends StatelessWidget {
   final Color? bgColor;
@@ -8,11 +8,11 @@ class SelectItem extends StatelessWidget {
   final double? radius;
   final bool? isActive;
 
-  final Function()? onTap;
+  final VoidCallback? onTap;
   const SelectItem({
     super.key,
     this.bgColor,
-    this.text = "",
+    this.text = '',
     this.height,
     this.radius = 15,
     this.onTap,

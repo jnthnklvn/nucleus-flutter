@@ -1,24 +1,25 @@
 import 'dart:math';
+
+import 'package:faker/faker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:faker/faker.dart';
-import '../../../ui_features/widgets/text_button.dart';
-import '../../../ui_features/model/search_model.dart';
-import '../../../config/config.dart';
-import '../../widgets/filter/serach_result_items.dart';
-import '../../widgets/input/input_custom.dart';
+import 'package:nucleus_ui_app/config/config.dart';
+import 'package:nucleus_ui_app/ui_features/model/search_model.dart';
+import 'package:nucleus_ui_app/ui_features/widgets/filter/serach_result_items.dart';
+import 'package:nucleus_ui_app/ui_features/widgets/input/input_custom.dart';
+import 'package:nucleus_ui_app/ui_features/widgets/text_button.dart';
 
 class SearchResultPgaes extends StatelessWidget {
   const SearchResultPgaes({super.key});
 
-  static const String searchResult = "searchResult";
+  static const String searchResult = 'searchResult';
 
   @override
   Widget build(BuildContext context) {
-    Faker faker = Faker();
-    TextEditingController search = TextEditingController();
+    final faker = Faker();
+    final search = TextEditingController();
 
-    final List<Search> searchs = List.generate(
+    final searchs = List<Search>.generate(
       100,
       (index) => Search(
         name: faker.person.firstName(),
@@ -59,12 +60,12 @@ class SearchResultPgaes extends StatelessWidget {
                         AssetPaths.iconClose,
                         fit: BoxFit.scaleDown,
                       ),
-                      hintText: "Type Here",
+                      hintText: 'Type Here',
                     ),
                   ),
                   horizontalSpace(15),
                   TextButtonCustom(
-                    text: "Cancel",
+                    text: 'Cancel',
                     onTap: () {},
                   ),
                 ],

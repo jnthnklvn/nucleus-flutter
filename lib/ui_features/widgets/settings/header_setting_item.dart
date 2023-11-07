@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import '../../../config/config.dart';
+import 'package:nucleus_ui_app/config/config.dart';
 
 class HeaderSettingItem extends StatelessWidget {
   final String title;
-  const HeaderSettingItem({super.key, required this.title});
+  const HeaderSettingItem({required this.title, super.key});
 
   @override
   Widget build(BuildContext context) {

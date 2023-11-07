@@ -3,13 +3,12 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 
 final GlobalKey<NavigatorState> navKey = GlobalKey<NavigatorState>();
-Timer? _loadTimer;
 
-Future nextScreenByName(String screen) async {
+Future<dynamic> nextScreenByName(String screen) async {
   return await navKey.currentState?.pushNamed(screen);
 }
 
-Future nextScreen(Widget screen) async {
+Future<dynamic> nextScreen(Widget screen) async {
   return await Navigator.push(
     navKey.currentContext!,
     MaterialPageRoute(builder: (_) => screen),

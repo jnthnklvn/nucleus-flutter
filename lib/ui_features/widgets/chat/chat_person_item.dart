@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import '../../../config/config.dart';
+import 'package:nucleus_ui_app/config/config.dart';
 
 class ChatPersonItem extends StatelessWidget {
-  Map<String, dynamic> dataChat;
+  final Map<String, dynamic> dataChat;
 
-  ChatPersonItem({
-    super.key,
+  const ChatPersonItem({
     required this.dataChat,
+    super.key,
   });
 
   @override
@@ -25,18 +25,18 @@ class ChatPersonItem extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  dataChat["name"],
+                  dataChat['name'],
                   style: AssetStyles.labelSmReguler,
                 ),
                 verticalSpace(2),
                 Text(
-                  dataChat["status"],
+                  dataChat['status'],
                   style: AssetStyles.labelSmReguler
                       .copyWith(fontWeight: FontWeight.w700),
                 ),
                 verticalSpace(2),
                 Text(
-                  dataChat["message"],
+                  dataChat['message'],
                   style: AssetStyles.labelSmReguler.copyWith(
                     color: AssetColors.inkLight,
                   ),
@@ -45,7 +45,7 @@ class ChatPersonItem extends StatelessWidget {
             ),
           ),
           Text(
-            dataChat["date"],
+            dataChat['date'],
             style: AssetStyles.labelSmReguler.copyWith(
               color: AssetColors.inkLight,
             ),

@@ -1,12 +1,12 @@
 import 'package:flutter/cupertino.dart';
-import '../../../config/config.dart';
+import 'package:nucleus_ui_app/config/config.dart';
 
 class SwitchCustom extends StatelessWidget {
-  final Function(bool?)? onChange;
+  final ValueChanged<bool?>? onChange;
   final String? text;
   const SwitchCustom({
-    super.key,
     required this.isChecked,
+    super.key,
     this.onChange,
     this.text,
   });

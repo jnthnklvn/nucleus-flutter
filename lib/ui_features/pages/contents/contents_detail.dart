@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import '../../../config/config.dart';
-import '../../../ui_features/widgets/appbar/appbar_primary.dart';
-import '../../../ui_features/widgets/button_primary.dart';
-import '../../widgets/button/button_icon_rounded.dart';
-import '../../widgets/home/detail_row.dart';
+import 'package:nucleus_ui_app/config/config.dart';
+import 'package:nucleus_ui_app/ui_features/widgets/appbar/appbar_primary.dart';
+import 'package:nucleus_ui_app/ui_features/widgets/button/button_icon_rounded.dart';
+import 'package:nucleus_ui_app/ui_features/widgets/button_primary.dart';
+import 'package:nucleus_ui_app/ui_features/widgets/home/detail_row.dart';
 
 class ContentDetailPages extends StatelessWidget {
   const ContentDetailPages({super.key});
-  static const String contentDetail = "contentDetail";
+  static const String contentDetail = 'contentDetail';
 
   @override
   Widget build(BuildContext context) {
@@ -35,14 +35,15 @@ class ContentDetailPages extends StatelessWidget {
                         ),
                         verticalSpace(30),
                         const Text(
-                          "Basic Yoga",
+                          'Basic Yoga',
                           style: AssetStyles.t2,
                         ),
                         verticalSpace(20),
                         Container(
                           margin: const EdgeInsets.symmetric(horizontal: 20),
                           child: const Text(
-                            "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+                            'Lorem Ipsum is simply dummy text of the printing '
+                            'and typesetting industry.',
                             textAlign: TextAlign.center,
                             style: AssetStyles.labelMdRegular,
                           ),
@@ -52,12 +53,12 @@ class ContentDetailPages extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
                             DetailRow(
-                              title: "15 Minutes",
-                              subTitle: "Duration",
+                              title: '15 Minutes',
+                              subTitle: 'Duration',
                             ),
                             DetailRow(
-                              title: "Beginner 1",
-                              subTitle: "Level 1",
+                              title: 'Beginner 1',
+                              subTitle: 'Level 1',
                             )
                           ],
                         ),
@@ -79,7 +80,7 @@ class ContentDetailPages extends StatelessWidget {
                       ButtonPrimary(
                         color: AssetColors.inkDarkest,
                         onTap: () {},
-                        text: "Start",
+                        text: 'Start',
                       ),
                       ButtonIconRounded(
                         icon: AssetPaths.iconMusic,

@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import '../../../config/config.dart';
-import '../../../ui_features/widgets/appbar/appbar_primary.dart';
-import '../../widgets/settings/button_setting_item.dart';
+import 'package:nucleus_ui_app/config/config.dart';
+import 'package:nucleus_ui_app/ui_features/widgets/appbar/appbar_primary.dart';
+import 'package:nucleus_ui_app/ui_features/widgets/settings/button_setting_item.dart';
 
 class AccountSettingPages extends StatelessWidget {
   const AccountSettingPages({super.key});
-  static const String accountSettingPages = "accountSettingPages";
+  static const String accountSettingPages = 'accountSettingPages';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const AppBarPrimary(
-        text: "Settings",
+        text: 'Settings',
       ),
       body: Container(
         padding: const EdgeInsets.symmetric(horizontal: 30),
@@ -33,7 +33,7 @@ class AccountSettingPages extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "Premium Membership",
+                          'Premium Membership',
                           style: AssetStyles.labelLgRegular.copyWith(
                             color: AssetColors.skyWhite,
                             fontWeight: FontWeight.bold,
@@ -41,7 +41,7 @@ class AccountSettingPages extends StatelessWidget {
                         ),
                         verticalSpace(5),
                         Text(
-                          "Upgrade for more features",
+                          'Upgrade for more features',
                           style: AssetStyles.labelSmReguler.copyWith(
                             color: AssetColors.skyWhite,
                           ),
@@ -51,7 +51,7 @@ class AccountSettingPages extends StatelessWidget {
                   ),
                   verticalSpace(32),
                   Text(
-                    "Account",
+                    'Account',
                     style: AssetStyles.labelLgRegular.copyWith(
                       fontWeight: FontWeight.bold,
                     ),
@@ -59,18 +59,18 @@ class AccountSettingPages extends StatelessWidget {
                   verticalSpace(20),
                   ButtonSetiingItem(
                     icon: AssetPaths.iconAvatar,
-                    text: "Profile",
+                    text: 'Profile',
                     prefixIcon: SvgPicture.asset(
                       AssetPaths.iconNext,
                     ),
                     onTap: () {
-                      print("Hello Address");
+                      debugPrint('Hello Address');
                     },
                   ),
                   verticalSpace(10),
                   ButtonSetiingItem(
                     icon: AssetPaths.iconLock,
-                    text: "Password",
+                    text: 'Password',
                     prefixIcon: SvgPicture.asset(
                       AssetPaths.iconNext,
                     ),
@@ -82,12 +82,12 @@ class AccountSettingPages extends StatelessWidget {
                     prefixIcon: SvgPicture.asset(
                       AssetPaths.iconNext,
                     ),
-                    text: "Notifications",
+                    text: 'Notifications',
                     onTap: () {},
                   ),
                   verticalSpace(30),
                   Text(
-                    "More",
+                    'More',
                     style: AssetStyles.labelLgRegular.copyWith(
                       fontWeight: FontWeight.bold,
                     ),
@@ -98,7 +98,7 @@ class AccountSettingPages extends StatelessWidget {
                     prefixIcon: SvgPicture.asset(
                       AssetPaths.iconNext,
                     ),
-                    text: "Rate & Review",
+                    text: 'Rate & Review',
                     onTap: () {},
                   ),
                   verticalSpace(10),
@@ -107,7 +107,7 @@ class AccountSettingPages extends StatelessWidget {
                     prefixIcon: SvgPicture.asset(
                       AssetPaths.iconNext,
                     ),
-                    text: "Help",
+                    text: 'Help',
                     onTap: () {},
                   ),
                 ],
@@ -115,10 +115,10 @@ class AccountSettingPages extends StatelessWidget {
             ),
             GestureDetector(
               onTap: () {
-                print("Log Out");
+                debugPrint('Log Out');
               },
               child: Text(
-                "Log out",
+                'Log out',
                 style: AssetStyles.labelMdRegular
                     .copyWith(color: AssetColors.skyDark),
               ),

@@ -5,7 +5,7 @@
 import 'dart:convert';
 
 List<Search> searchFromJson(String str) =>
-    List<Search>.from(json.decode(str).map((x) => Search.fromJson(x)));
+    List<Search>.from(json.decode(str).map(Search.fromJson));
 
 String searchToJson(List<Search> data) =>
     json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
@@ -22,16 +22,16 @@ class Search {
   });
 
   factory Search.fromJson(Map<String, dynamic> json) => Search(
-        name: json["name"],
-        avatar: json["avatar"],
+        name: json['name'],
+        avatar: json['avatar'],
         position: List<Position>.from(
-            json["position"].map((x) => Position.fromJson(x))),
+            json['position'].map(Position.fromJson)),
       );
 
   Map<String, dynamic> toJson() => {
-        "name": name,
-        "avatar": avatar,
-        "position": List<dynamic>.from(position.map((x) => x.toJson())),
+        'name': name,
+        'avatar': avatar,
+        'position': List<dynamic>.from(position.map((x) => x.toJson())),
       };
 }
 
@@ -43,10 +43,10 @@ class Position {
   });
 
   factory Position.fromJson(Map<String, dynamic> json) => Position(
-        name: json["name"],
+        name: json['name'],
       );
 
   Map<String, dynamic> toJson() => {
-        "name": name,
+        'name': name,
       };
 }

@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
-import '../../config/config.dart';
+import 'package:nucleus_ui_app/config/config.dart';
 
 // ignore: must_be_immutable
 class TextButtonCustom extends StatelessWidget {
   final String text;
-  final Function() onTap;
+  final VoidCallback onTap;
   final BoxDecoration? decoration;
   final EdgeInsetsGeometry? padding;
   TextStyle? style;
   final BorderRadius? borderRadius;
   TextButtonCustom({
-    super.key,
     required this.text,
     required this.onTap,
+    super.key,
     this.borderRadius,
     this.decoration,
     this.padding,

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../app/app_theme.dart';
-import '../config/asset_colors.dart';
+import 'package:nucleus_ui_app/app/app_theme.dart';
+import 'package:nucleus_ui_app/config/asset_colors.dart';
 
 class AssetStyles {
   //Settingan Baru

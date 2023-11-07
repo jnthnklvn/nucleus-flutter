@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import '../../../config/config.dart';
+import 'package:nucleus_ui_app/config/config.dart';
 
 // ignore: must_be_immutable
 class ButtonSetiingItem extends StatelessWidget {
   final String icon;
   final String text;
-  Function()? onTap;
+  VoidCallback? onTap;
   Widget? prefixIcon;
   ButtonSetiingItem({
-    super.key,
     required this.icon,
     required this.text,
+    super.key,
     this.onTap,
     this.prefixIcon,
   });

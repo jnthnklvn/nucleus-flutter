@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import '../../../config/config.dart';
+import 'package:nucleus_ui_app/config/config.dart';
 
 class AppBarPrimary extends StatelessWidget implements PreferredSizeWidget {
   final Color? backgroundColor;
@@ -10,7 +10,7 @@ class AppBarPrimary extends StatelessWidget implements PreferredSizeWidget {
   final Widget? leading;
   final double? elevation;
   final List<Widget>? actions;
-  final Function()? onTapBack;
+  final VoidCallback? onTapBack;
   final TextStyle? textStyle;
   final Color? iconColor;
   const AppBarPrimary({
@@ -33,7 +33,7 @@ class AppBarPrimary extends StatelessWidget implements PreferredSizeWidget {
       centerTitle: true,
       automaticallyImplyLeading: false,
       title: Text(
-        text ?? "",
+        text ?? '',
         style: textStyle ??
             AssetStyles.labelLgRegular.copyWith(
               fontWeight: FontWeight.w500,
@@ -55,7 +55,9 @@ class AppBarPrimary extends StatelessWidget implements PreferredSizeWidget {
                 },
                 icon: SvgPicture.asset(
                   AssetPaths.iconBack,
-                  color: iconColor ?? AssetColors.inkDarkest,
+                  theme: SvgTheme(
+                    currentColor: iconColor ?? AssetColors.inkDarkest,
+                  ),
                 ),
               )
           : null,

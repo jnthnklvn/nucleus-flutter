@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../../../../config/config.dart';
-import '../../../../ui_features/model/sort_model.dart';
-import '../../../../ui_features/widgets/input/select_item1.dart';
+import 'package:nucleus_ui_app/config/config.dart';
+import 'package:nucleus_ui_app/ui_features/model/sort_model.dart';
+import 'package:nucleus_ui_app/ui_features/widgets/input/select_item1.dart';
 
 class StepFirstPerson extends StatefulWidget {
   const StepFirstPerson({super.key});
@@ -16,10 +16,10 @@ class _StepFirstPersonState extends State<StepFirstPerson> {
 
   @override
   Widget build(BuildContext context) {
-    List<SortModel> tell = [
-      SortModel(name: "Lose weight and increase stamina", status: true),
-      SortModel(name: "Maintain weigh for health", status: false),
-      SortModel(name: "Gain weight for building muscle", status: false),
+    final tell = <SortModel>[
+      SortModel(name: 'Lose weight and increase stamina', status: true),
+      SortModel(name: 'Maintain weigh for health', status: false),
+      SortModel(name: 'Gain weight for building muscle', status: false),
     ];
     return Column(
       mainAxisSize: MainAxisSize.min,
@@ -27,16 +27,16 @@ class _StepFirstPersonState extends State<StepFirstPerson> {
       children: [
         verticalSpace(20),
         const Text(
-          "Tell us your goal",
+          'Tell us your goal',
           style: AssetStyles.t2,
         ),
         verticalSpace(10),
         const Text(
-          "We will recommend diets and exercises that suit you",
+          'We will recommend diets and exercises that suit you',
           style: AssetStyles.labelMdRegular,
         ),
         verticalSpace(40),
-        for (var e in tell)
+        for (final e in tell)
           GestureDetector(
             onTap: () {
               if (value != e.name) {

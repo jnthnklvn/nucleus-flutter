@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
-import '../../../config/config.dart';
-import '../../model/sort_model.dart';
-import '../../widgets/button_primary.dart';
-import '../../widgets/text_button.dart';
+import 'package:nucleus_ui_app/config/config.dart';
+import 'package:nucleus_ui_app/ui_features/model/sort_model.dart';
+import 'package:nucleus_ui_app/ui_features/widgets/button_primary.dart';
+import 'package:nucleus_ui_app/ui_features/widgets/text_button.dart';
 
 class FilterModalPages extends StatelessWidget {
   FilterModalPages({super.key});
-  static const String filterModalPages = "filterModalPages";
+  static const String filterModalPages = 'filterModalPages';
 
   final List<SortModel> sortData = [
-    SortModel(name: "All Categories", status: false),
-    SortModel(name: "Smart Watches", status: true),
-    SortModel(name: "Cell Phones & Accessories", status: true),
-    SortModel(name: "Sporting Goods", status: false),
-    SortModel(name: "Computer", status: false),
+    SortModel(name: 'All Categories', status: false),
+    SortModel(name: 'Smart Watches', status: true),
+    SortModel(name: 'Cell Phones & Accessories', status: true),
+    SortModel(name: 'Sporting Goods', status: false),
+    SortModel(name: 'Computer', status: false),
   ];
 
   @override
@@ -22,7 +22,7 @@ class FilterModalPages extends StatelessWidget {
       body: Center(
         child: ElevatedButton(
           onPressed: () {
-            showModalBottomSheet(
+            showModalBottomSheet<void>(
               context: context,
               shape: const RoundedRectangleBorder(
                 borderRadius: BorderRadius.only(
@@ -35,7 +35,7 @@ class FilterModalPages extends StatelessWidget {
               ),
             );
           },
-          child: const Text("Show Modal"),
+          child: const Text('Show Modal'),
         ),
       ),
     );
@@ -44,8 +44,8 @@ class FilterModalPages extends StatelessWidget {
 
 class ModalFilterBody extends StatelessWidget {
   const ModalFilterBody({
-    super.key,
     required this.sm,
+    super.key,
   });
 
   final List<SortModel> sm;
@@ -78,7 +78,7 @@ class ModalFilterBody extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const Text(
-                  "Filter",
+                  'Filter',
                   style: AssetStyles.h2,
                 ),
                 verticalSpace(20),
@@ -120,14 +120,14 @@ class ModalFilterBody extends StatelessWidget {
                 verticalSpace(20),
                 ButtonPrimary(
                   onTap: () {},
-                  text: "Show 340 Result",
+                  text: 'Show 340 Result',
                   height: 40,
                   width: screenWidth(context) * 0.9,
                 ),
                 verticalSpace(20),
                 Center(
                   child: TextButtonCustom(
-                    text: "Reset",
+                    text: 'Reset',
                     style: AssetStyles.labelMdRegular
                         .copyWith(color: AssetColors.inkDarkest),
                     onTap: () {},

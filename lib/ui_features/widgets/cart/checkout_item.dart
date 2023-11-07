@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
-import '../../../ui_features/widgets/text_button.dart';
-import '../../../config/config.dart';
+import 'package:nucleus_ui_app/config/config.dart';
+import 'package:nucleus_ui_app/ui_features/widgets/text_button.dart';
 
 class CheckOutItem extends StatelessWidget {
-  String? title;
-  String? subTitle;
-  Function() onTap;
+  final String? title;
+  final String? subTitle;
+  final VoidCallback onTap;
 
-  CheckOutItem({
+  const CheckOutItem({
+    required this.onTap,
     super.key,
     this.title,
     this.subTitle,
-    required this.onTap,
   });
 
   @override
@@ -36,7 +36,7 @@ class CheckOutItem extends StatelessWidget {
           ],
         ),
         TextButtonCustom(
-          text: "Edit",
+          text: 'Edit',
           borderRadius: BorderRadius.circular(
             20,
           ),

@@ -1,53 +1,51 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:nucleus_ui_app/config/asset_paths.dart';
 import 'package:nucleus_ui_app/config/config.dart';
 import 'package:nucleus_ui_app/ui_features/model/chat_model.dart';
 import 'package:nucleus_ui_app/ui_features/widgets/appbar/appbar_secodary.dart';
 import 'package:nucleus_ui_app/ui_features/widgets/chat/chat_receiver_item.dart';
+import 'package:nucleus_ui_app/ui_features/widgets/chat/chat_sender_item.dart';
 import 'package:nucleus_ui_app/ui_features/widgets/input/input_custom.dart';
-
-import '../../widgets/chat/chat_sender_item.dart';
 
 class ChatPages extends StatelessWidget {
   ChatPages({super.key});
-  static const String chatPages = "chatPages";
+  static const String chatPages = 'chatPages';
 
   final List<ChatModel> chat = [
     ChatModel(
       image: AssetPaths.imageAvatar1,
-      tipe: "sender",
-      message: "Hi, Mandy",
+      tipe: 'sender',
+      message: 'Hi, Mandy',
       status: 1,
     ),
     ChatModel(
       image: AssetPaths.imageAvatar1,
-      tipe: "sender",
+      tipe: 'sender',
       message: "i've tried the app",
       status: 1,
     ),
     ChatModel(
       image: AssetPaths.imageAvatar1,
-      tipe: "receiver",
-      message: "Relly?",
+      tipe: 'receiver',
+      message: 'Relly?',
       status: 1,
     ),
     ChatModel(
       image: AssetPaths.imageAvatar1,
-      tipe: "sender",
+      tipe: 'sender',
       message: "Yeah, it's really good!",
       status: 1,
     ),
     ChatModel(
       image: AssetPaths.imageAvatar1,
-      tipe: "receiver",
-      message: "",
+      tipe: 'receiver',
+      message: '',
       status: 0,
     ),
   ];
   @override
   Widget build(BuildContext context) {
-    TextEditingController messgae = TextEditingController();
+    final messgae = TextEditingController();
     return Scaffold(
       appBar: AppBarSecondary(
         leading: TextButton(
@@ -74,7 +72,7 @@ class ChatPages extends StatelessWidget {
               child:
                   Column(mainAxisAlignment: MainAxisAlignment.end, children: [
                 Text(
-                  "09:41 AM",
+                  '09:41 AM',
                   style: AssetStyles.labelSmReguler.copyWith(
                     color: AssetColors.skyDark,
                   ),
@@ -82,7 +80,7 @@ class ChatPages extends StatelessWidget {
                 verticalSpace(20),
                 ...chat
                     .map(
-                      (data) => (data.tipe == "sender")
+                      (data) => (data.tipe == 'sender')
                           ? ChatSenderItem(
                               data: data,
                             )
@@ -96,7 +94,7 @@ class ChatPages extends StatelessWidget {
             verticalSpace(10),
             InputCustom(
               controller: messgae,
-              hintText: "Type Your Message",
+              hintText: 'Type Your Message',
             ),
           ],
         ),

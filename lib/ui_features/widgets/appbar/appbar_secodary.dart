@@ -10,9 +10,9 @@ class AppBarSecondary extends StatelessWidget implements PreferredSizeWidget {
   final Widget? leading;
   final double? elevation;
   final List<Widget>? actions;
-  final Function()? onTapBack;
+  final VoidCallback? onTapBack;
   final Widget? center;
-  AppBarSecondary({
+  const AppBarSecondary({
     super.key,
     this.backgroundColor,
     this.heightAppBar,

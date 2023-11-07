@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../../../config/asset_paths.dart';
-import '../../../config/ui_helper.dart';
+import 'package:nucleus_ui_app/config/asset_paths.dart';
+import 'package:nucleus_ui_app/config/ui_helper.dart';
 
 class FlagCountryNumber extends StatelessWidget {
   const FlagCountryNumber({
@@ -21,7 +21,7 @@ class FlagCountryNumber extends StatelessWidget {
               fit: BoxFit.cover,
             ),
             horizontalSpace(5),
-            const Text("+62"),
+            const Text('+62'),
             horizontalSpace(5),
             SvgPicture.asset(AssetPaths.iconDown)
           ],

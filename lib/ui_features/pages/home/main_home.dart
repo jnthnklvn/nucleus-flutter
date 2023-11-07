@@ -1,52 +1,51 @@
 import 'package:flutter/material.dart';
 import 'package:nucleus_ui_app/config/config.dart';
+import 'package:nucleus_ui_app/ui_features/widgets/home/thumbnail_img.dart';
 import 'package:nucleus_ui_app/ui_features/widgets/home/thumbnail_img_1.dart';
-
-import '../../widgets/home/thumbnail_img.dart';
 
 class HomePages1 extends StatelessWidget {
   HomePages1({super.key});
-  static const String homePages = "homePages";
+  static const String homePages = 'homePages';
 
   final List<Map<String, String>> hits = [
     {
-      "title": "Chill Hits",
-      "images": AssetPaths.imageHits1,
+      'title': 'Chill Hits',
+      'images': AssetPaths.imageHits1,
     },
     {
-      "title": "Top Hits",
-      "images": AssetPaths.imageHits2,
+      'title': 'Top Hits',
+      'images': AssetPaths.imageHits2,
     },
     {
-      "title": "Happy Hits",
-      "images": AssetPaths.imageHits3,
+      'title': 'Happy Hits',
+      'images': AssetPaths.imageHits3,
     },
     {
-      "title": "Good Time",
-      "images": AssetPaths.imageHits4,
+      'title': 'Good Time',
+      'images': AssetPaths.imageHits4,
     }
   ];
 
   final List<Map<String, String>> topSongs = [
     {
-      "title": "Daily Mix",
-      "images": AssetPaths.imageHits2,
-      "desc": "Jonas Blue, NOTD, David Guetta and more"
+      'title': 'Daily Mix',
+      'images': AssetPaths.imageHits2,
+      'desc': 'Jonas Blue, NOTD, David Guetta and more'
     },
     {
-      "title": "Feelin' Myself",
-      "images": AssetPaths.imageHits3,
-      "desc": "Ariana Grande, Doja Cat, Megan Thee Stallion...",
+      'title': "Feelin' Myself",
+      'images': AssetPaths.imageHits3,
+      'desc': 'Ariana Grande, Doja Cat, Megan Thee Stallion...',
     },
     {
-      "title": "Deny Caknan",
-      "images": AssetPaths.imageHits2,
-      "desc": "BTS, Dua Lipa, Malone, Justin Bieber and more",
+      'title': 'Deny Caknan',
+      'images': AssetPaths.imageHits2,
+      'desc': 'BTS, Dua Lipa, Malone, Justin Bieber and more',
     },
     {
-      "title": "Adellla",
-      "images": AssetPaths.imageHits1,
-      "desc": "BTS, Dua Lipa, Malone, Justin Bieber and more",
+      'title': 'Adellla',
+      'images': AssetPaths.imageHits1,
+      'desc': 'BTS, Dua Lipa, Malone, Justin Bieber and more',
     }
   ];
 
@@ -67,7 +66,7 @@ class HomePages1 extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        "Good Morning!",
+                        'Good Morning!',
                         style: AssetStyles.t3,
                       ),
                       CircleAvatar(
@@ -92,7 +91,7 @@ class HomePages1 extends StatelessWidget {
                 ),
                 verticalSpace(20),
                 Text(
-                  "Just For You",
+                  'Just For You',
                   style: AssetStyles.labelMdRegular
                       .copyWith(fontWeight: FontWeight.bold),
                 ),
@@ -110,7 +109,7 @@ class HomePages1 extends StatelessWidget {
                 ),
                 verticalSpace(20),
                 Text(
-                  "Popular Songs",
+                  'Popular Songs',
                   style: AssetStyles.labelLgRegular.copyWith(
                     fontWeight: FontWeight.bold,
                   ),

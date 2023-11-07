@@ -7,7 +7,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 
 List<Product> productFromJson(String str) =>
-    List<Product>.from(json.decode(str).map((x) => Product.fromJson(x)));
+    List<Product>.from(json.decode(str).map(Product.fromJson));
 
 String productToJson(List<Product> data) =>
     json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
@@ -30,20 +30,20 @@ class Product {
   });
 
   factory Product.fromJson(Map<String, dynamic> json) => Product(
-        namaProduk: json["namaProduk"],
-        hargaProduk: json["hargaProduk"],
-        pilihanGambar: List<String>.from(json["pilihanGambar"].map((x) => x)),
-        pilihanWarna: List<Color>.from(json["pilihanWarna"].map((x) => x)),
-        pilihanUkuran: List<String>.from(json["pilihanUkuran"].map((x) => x)),
-        deskripsiProduk: json["deskripsiProduk"],
+        namaProduk: json['namaProduk'],
+        hargaProduk: json['hargaProduk'],
+        pilihanGambar: List<String>.from(json['pilihanGambar']),
+        pilihanWarna: List<Color>.from(json['pilihanWarna']),
+        pilihanUkuran: List<String>.from(json['pilihanUkuran']),
+        deskripsiProduk: json['deskripsiProduk'],
       );
 
   Map<String, dynamic> toJson() => {
-        "namaProduk": namaProduk,
-        "hargaProduk": hargaProduk,
-        "pilihanGambar": List<dynamic>.from(pilihanGambar.map((x) => x)),
-        "pilihanWarna": List<dynamic>.from(pilihanWarna.map((x) => x)),
-        "pilihanUkuran": List<dynamic>.from(pilihanUkuran.map((x) => x)),
-        "deskripsiProduk": deskripsiProduk,
+        'namaProduk': namaProduk,
+        'hargaProduk': hargaProduk,
+        'pilihanGambar': List<dynamic>.from(pilihanGambar.map((x) => x)),
+        'pilihanWarna': List<dynamic>.from(pilihanWarna.map((x) => x)),
+        'pilihanUkuran': List<dynamic>.from(pilihanUkuran.map((x) => x)),
+        'deskripsiProduk': deskripsiProduk,
       };
 }

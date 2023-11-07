@@ -2,14 +2,14 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:nucleus_ui_app/config/config.dart';
+import 'package:nucleus_ui_app/ui_features/model/place_model.dart';
 import 'package:nucleus_ui_app/ui_features/widgets/chip/primary_chip.dart';
-import '../../../config/config.dart';
-import '../../../ui_features/model/place_model.dart';
-import '../../../ui_features/widgets/map/place_item.dart';
+import 'package:nucleus_ui_app/ui_features/widgets/map/place_item.dart';
 
 class MapPages extends StatefulWidget {
   const MapPages({super.key});
-  static const String mapPages = "mapPages";
+  static const String mapPages = 'mapPages';
   @override
   State<MapPages> createState() => _MapPagesState();
 }
@@ -17,26 +17,26 @@ class MapPages extends StatefulWidget {
 class _MapPagesState extends State<MapPages> {
   List<Place> places = [
     Place(
-      title: "Entire House",
-      subtitle: "Huntington Beach Bungalow",
+      title: 'Entire House',
+      subtitle: 'Huntington Beach Bungalow',
       price: 250,
-      time: "night",
+      time: 'night',
       rating: 4.65,
       images: AssetPaths.imageHotel1,
     ),
     Place(
-      title: "Entire House",
-      subtitle: "Perfect Beach House in New...",
+      title: 'Entire House',
+      subtitle: 'Perfect Beach House in New...',
       price: 320,
-      time: "night",
+      time: 'night',
       rating: 4.65,
       images: AssetPaths.imageHotel2,
     ),
     Place(
-      title: "Entire House",
-      subtitle: "Huntington Beach Bungalow",
+      title: 'Entire House',
+      subtitle: 'Huntington Beach Bungalow',
       price: 250,
-      time: "night",
+      time: 'night',
       rating: 4.65,
       images: AssetPaths.imageHotel1,
     ),
@@ -66,17 +66,17 @@ class _MapPagesState extends State<MapPages> {
                   height: screenHeight(context),
                   width: screenWidth(context),
                 ),
-                for (var i in [
-                  "\$125",
-                  "\$150",
-                  "\$160",
-                  "\$180",
-                  "\$240",
-                  "\$320",
-                  "\$250",
-                  "\$140",
-                  "\$190",
-                  "\$290",
+                for (final i in [
+                  '\$125',
+                  '\$150',
+                  '\$160',
+                  '\$180',
+                  '\$240',
+                  '\$320',
+                  '\$250',
+                  '\$140',
+                  '\$190',
+                  '\$290',
                 ])
                   Positioned(
                     top: 60 + (Random().nextDouble() * 256),

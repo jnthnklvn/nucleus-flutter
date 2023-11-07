@@ -1,14 +1,13 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-
-import '../../../config/config.dart';
-import '../../../ui_features/widgets/appbar/appbar_primary.dart';
-import '../../../ui_features/widgets/button_primary.dart';
-import '../../../ui_features/widgets/text_button.dart';
+import 'package:nucleus_ui_app/config/config.dart';
+import 'package:nucleus_ui_app/ui_features/widgets/appbar/appbar_primary.dart';
+import 'package:nucleus_ui_app/ui_features/widgets/button_primary.dart';
+import 'package:nucleus_ui_app/ui_features/widgets/text_button.dart';
 
 class SubScriptionPages extends StatelessWidget {
   const SubScriptionPages({super.key});
-  static const String subscriptionPages = "subscriptionPages";
+  static const String subscriptionPages = 'subscriptionPages';
 
   @override
   Widget build(BuildContext context) {
@@ -19,8 +18,7 @@ class SubScriptionPages extends StatelessWidget {
         actions: [
           Container(
             margin: const EdgeInsets.only(top: 15, right: 20),
-            child:
-                TextButtonCustom(text: "Skip", onTap: () => backScreenUntil()),
+            child: TextButtonCustom(text: 'Skip', onTap: backScreenUntil),
           ),
         ],
       ),
@@ -30,7 +28,7 @@ class SubScriptionPages extends StatelessWidget {
           Container(
             margin: const EdgeInsets.symmetric(horizontal: 30),
             child: const Text(
-              "Get unlimited access to our programs.",
+              'Get unlimited access to our programs.',
               style: AssetStyles.t3,
               textAlign: TextAlign.center,
             ),
@@ -39,7 +37,7 @@ class SubScriptionPages extends StatelessWidget {
           Container(
             margin: const EdgeInsets.symmetric(horizontal: 30),
             child: const Text(
-              "Take the first step towards a healthier and\nhappier life.",
+              'Take the first step towards a healthier and\nhappier life.',
               style: AssetStyles.labelSmReguler,
               textAlign: TextAlign.center,
             ),
@@ -66,31 +64,32 @@ class SubScriptionPages extends StatelessWidget {
                 child: Column(
                   children: [
                     const Text(
-                      "POPULAR",
+                      'POPULAR',
                       style: AssetStyles.labelTinyReguler,
                     ),
                     verticalSpace(15),
                     Text(
-                      "Exercise Class",
+                      'Exercise Class',
                       style: AssetStyles.labelLgRegular.copyWith(
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                     verticalSpace(15),
                     const Text(
-                      "\$60.99",
+                      '\$60.99',
                       style: AssetStyles.t1,
                     ),
                     verticalSpace(15),
                     const Text(
-                      "For 1 Year",
+                      'For 1 Year',
                       style: AssetStyles.labelTinyReguler,
                     ),
                     const Spacer(),
                     Container(
                       padding: const EdgeInsets.symmetric(horizontal: 50),
                       child: const Text(
-                        "iOS, Android, Apple TV, Roku,\nAmazon Fire TV, web browser",
+                        'iOS, Android, Apple TV, Roku,'
+                        '\nAmazon Fire TV, web browser',
                         style: AssetStyles.labelTinyReguler,
                         textAlign: TextAlign.center,
                       ),
@@ -98,11 +97,11 @@ class SubScriptionPages extends StatelessWidget {
                     verticalSpace(20),
                     ButtonPrimary(
                       onTap: () {
-                        print("asd");
+                        debugPrint('asd');
                       },
                       width: screenWidth(context),
                       color: AssetColors.primaryBase,
-                      text: "Subscribe",
+                      text: 'Subscribe',
                       height: 50,
                     ),
                   ],
@@ -114,7 +113,9 @@ class SubScriptionPages extends StatelessWidget {
           Container(
             margin: const EdgeInsets.symmetric(horizontal: 30),
             child: const Text(
-              "You will be charged \$9.99 (monthly plan) or \$60.99\n(annual plan) through your iTunes account. You can\ncancel at any time if your not satisfied.",
+              'You will be charged \$9.99 (monthly plan) or \$60.99'
+              '\n(annual plan) through your iTunes account. You can'
+              '\ncancel at any time if your not satisfied.',
               style: AssetStyles.labelTinyReguler,
               textAlign: TextAlign.center,
             ),

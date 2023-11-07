@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
-import '../../../config/config.dart';
-import '../../../ui_features/model/sort_model.dart';
-import '../../../ui_features/widgets/appbar/appbar_secodary.dart';
-import '../../../ui_features/widgets/button_primary.dart';
-import '../../widgets/input/select_item.dart';
-import '../../widgets/text_button.dart';
+import 'package:nucleus_ui_app/config/config.dart';
+import 'package:nucleus_ui_app/ui_features/model/sort_model.dart';
+import 'package:nucleus_ui_app/ui_features/widgets/appbar/appbar_secodary.dart';
+import 'package:nucleus_ui_app/ui_features/widgets/button_primary.dart';
+import 'package:nucleus_ui_app/ui_features/widgets/input/select_item.dart';
+import 'package:nucleus_ui_app/ui_features/widgets/text_button.dart';
 
 class PersonalizationFirstPage extends StatefulWidget {
-  static const String personalizationFirstPage = "personalizationFirstPage";
+  static const String personalizationFirstPage = 'personalizationFirstPage';
   const PersonalizationFirstPage({super.key});
 
   @override
@@ -18,16 +18,16 @@ class PersonalizationFirstPage extends StatefulWidget {
 
 class _PersonalizationFirstPageState extends State<PersonalizationFirstPage> {
   List<SortModel> pilihan = [
-    SortModel(name: "None", status: true),
-    SortModel(name: "Core Strength", status: false),
-    SortModel(name: "Chest", status: false),
-    SortModel(name: "Shoulder", status: false),
-    SortModel(name: "Backbends", status: false),
-    SortModel(name: "Traps", status: false),
-    SortModel(name: "Forearms", status: false),
-    SortModel(name: "Hamstring", status: false),
-    SortModel(name: "Upper Back", status: false),
-    SortModel(name: "Lower Back", status: false),
+    SortModel(name: 'None', status: true),
+    SortModel(name: 'Core Strength', status: false),
+    SortModel(name: 'Chest', status: false),
+    SortModel(name: 'Shoulder', status: false),
+    SortModel(name: 'Backbends', status: false),
+    SortModel(name: 'Traps', status: false),
+    SortModel(name: 'Forearms', status: false),
+    SortModel(name: 'Hamstring', status: false),
+    SortModel(name: 'Upper Back', status: false),
+    SortModel(name: 'Lower Back', status: false),
   ];
   @override
   Widget build(BuildContext context) {
@@ -55,12 +55,12 @@ class _PersonalizationFirstPageState extends State<PersonalizationFirstPage> {
           Container(
             margin: const EdgeInsets.only(top: 20, right: 20),
             child: TextButtonCustom(
-              text: "Skip",
+              text: 'Skip',
               style: AssetStyles.labelMdRegular.copyWith(
                 color: AssetColors.skyDark,
                 fontWeight: FontWeight.w500,
               ),
-              onTap: () => backScreenUntil(),
+              onTap: backScreenUntil,
             ),
           ),
         ],
@@ -70,11 +70,11 @@ class _PersonalizationFirstPageState extends State<PersonalizationFirstPage> {
         child: Column(
           children: [
             const Text(
-              "Practice Area",
+              'Practice Area',
               style: AssetStyles.t2,
             ),
             verticalSpace(10),
-            Text("So we can recommend exercises",
+            Text('So we can recommend exercises',
                 style: AssetStyles.labelMdRegular.copyWith(
                   color: AssetColors.inkLight,
                 )),
@@ -103,7 +103,7 @@ class _PersonalizationFirstPageState extends State<PersonalizationFirstPage> {
             verticalSpace(10),
             ButtonPrimary(
               width: screenWidth(context) * 0.9,
-              text: "Select",
+              text: 'Select',
               onTap: () {},
             ),
           ],

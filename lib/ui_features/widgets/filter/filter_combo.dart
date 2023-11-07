@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import '../../../config/config.dart';
+import 'package:nucleus_ui_app/config/config.dart';
 
 // ignore: must_be_immutable
 class FilterComboBox extends StatelessWidget {
   final String? title;
   final String? subTitle;
-  Function() onTap;
+  VoidCallback onTap;
   final String? icon;
   final bool? isActive;
   FilterComboBox({
+    required this.onTap,
     super.key,
     this.title,
     this.subTitle,
-    required this.onTap,
     this.isActive = false,
     this.icon = AssetPaths.iconDown,
   });

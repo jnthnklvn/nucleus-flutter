@@ -5,7 +5,7 @@
 import 'dart:convert';
 
 List<NavbarModel> navbarModelFromJson(String str) => List<NavbarModel>.from(
-    json.decode(str).map((x) => NavbarModel.fromJson(x)));
+    json.decode(str).map(NavbarModel.fromJson));
 
 String navbarModelToJson(List<NavbarModel> data) =>
     json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
@@ -22,14 +22,14 @@ class NavbarModel {
   });
 
   factory NavbarModel.fromJson(Map<String, dynamic> json) => NavbarModel(
-        icon: json["icon"],
-        title: json["title"],
-        status: json["status"],
+        icon: json['icon'],
+        title: json['title'],
+        status: json['status'],
       );
 
   Map<String, dynamic> toJson() => {
-        "icon": icon,
-        "title": title,
-        "status": status,
+        'icon': icon,
+        'title': title,
+        'status': status,
       };
 }

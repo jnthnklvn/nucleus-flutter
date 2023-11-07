@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../../config/config.dart';
+import 'package:nucleus_ui_app/config/config.dart';
 
 class GreetingHeader extends StatelessWidget {
   const GreetingHeader({
@@ -17,12 +17,12 @@ class GreetingHeader extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const Text(
-                  "Good Morning",
+                  'Good Morning',
                   style: AssetStyles.t2,
                 ),
                 verticalSpace(5),
                 const Text(
-                  "Monday, January 25, 2021",
+                  'Monday, January 25, 2021',
                   style: AssetStyles.labelMdRegular,
                 ),
               ],
@@ -36,7 +36,7 @@ class GreetingHeader extends StatelessWidget {
               ),
               verticalSpace(10),
               Text(
-                "28\u2109",
+                '28\u2109',
                 style: AssetStyles.labelMdRegular.copyWith(
                   fontWeight: FontWeight.bold,
                 ),

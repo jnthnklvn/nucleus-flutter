@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:nucleus_ui_app/config/config.dart';
 import 'package:nucleus_ui_app/ui_features/model/sort_model.dart';
-import '../../../config/config.dart';
 
 class SortModalPages extends StatelessWidget {
   SortModalPages({super.key});
-  static const String sortModalPages = "sortModalPages";
+  static const String sortModalPages = 'sortModalPages';
 
   final List<SortModel> sortData = [
-    SortModel(name: "Custom", status: false),
-    SortModel(name: "Relevance", status: true),
-    SortModel(name: "Most Recent", status: false),
-    SortModel(name: "Lowest Price", status: false),
-    SortModel(name: "Highest Price", status: false),
+    SortModel(name: 'Custom', status: false),
+    SortModel(name: 'Relevance', status: true),
+    SortModel(name: 'Most Recent', status: false),
+    SortModel(name: 'Lowest Price', status: false),
+    SortModel(name: 'Highest Price', status: false),
   ];
 
   @override
@@ -21,7 +21,7 @@ class SortModalPages extends StatelessWidget {
       body: Center(
         child: ElevatedButton(
           onPressed: () {
-            showModalBottomSheet(
+            showModalBottomSheet<void>(
               context: context,
               shape: const RoundedRectangleBorder(
                 borderRadius: BorderRadius.only(
@@ -34,7 +34,7 @@ class SortModalPages extends StatelessWidget {
               ),
             );
           },
-          child: const Text("Show Modal"),
+          child: const Text('Show Modal'),
         ),
       ),
     );
@@ -43,8 +43,8 @@ class SortModalPages extends StatelessWidget {
 
 class ModalSortBody extends StatelessWidget {
   const ModalSortBody({
-    super.key,
     required this.sm,
+    super.key,
   });
 
   final List<SortModel> sm;
@@ -77,7 +77,7 @@ class ModalSortBody extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const Text(
-                  "Sort",
+                  'Sort',
                   style: AssetStyles.h2,
                 ),
                 verticalSpace(20),
@@ -101,9 +101,10 @@ class ModalSortBody extends StatelessWidget {
                               sm[index].name,
                               style: AssetStyles.labelMdRegular,
                             ),
-                            sm[index].status
-                                ? SvgPicture.asset(AssetPaths.iconCheck)
-                                : Container(),
+                            if (sm[index].status)
+                              SvgPicture.asset(AssetPaths.iconCheck)
+                            else
+                              Container(),
                           ],
                         ),
                       ),

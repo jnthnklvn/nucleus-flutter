@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import '../../../config/config.dart';
-import '../input/input_custom.dart';
+import 'package:nucleus_ui_app/config/config.dart';
+import 'package:nucleus_ui_app/ui_features/widgets/input/input_custom.dart';
 
 class AppBarChat extends StatelessWidget {
   const AppBarChat({
-    super.key,
-    required this.search,
+    required this.search, super.key,
   });
 
   final TextEditingController search;
@@ -18,7 +17,7 @@ class AppBarChat extends StatelessWidget {
         Expanded(
           child: InputCustom(
             controller: search,
-            hintText: "Search Email",
+            hintText: 'Search Email',
             filled: true,
             borderless: true,
             fillColor: AssetColors.skyLighter,

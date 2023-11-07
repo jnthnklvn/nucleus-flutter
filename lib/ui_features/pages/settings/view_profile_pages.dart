@@ -1,30 +1,29 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
+import 'package:nucleus_ui_app/config/config.dart';
 import 'package:nucleus_ui_app/ui_features/model/navbar_model.dart';
+import 'package:nucleus_ui_app/ui_features/widgets/appbar/appbar_primary.dart';
 import 'package:nucleus_ui_app/ui_features/widgets/button_primary.dart';
 import 'package:nucleus_ui_app/ui_features/widgets/navbar/navbar_custom1.dart';
-import '../../../config/config.dart';
-import '../../widgets/appbar/appbar_primary.dart';
-import '../../widgets/settings/button_twolist_item.dart';
-import '../../widgets/settings/header_setting_item.dart';
-import '../../widgets/settings/list_view_setting_item.dart';
+import 'package:nucleus_ui_app/ui_features/widgets/settings/button_twolist_item.dart';
+import 'package:nucleus_ui_app/ui_features/widgets/settings/header_setting_item.dart';
+import 'package:nucleus_ui_app/ui_features/widgets/settings/list_view_setting_item.dart';
 
 class ViewProfilePages extends StatelessWidget {
   const ViewProfilePages({super.key});
-  static const String viewProfilePages = "viewProfilePages";
+  static const String viewProfilePages = 'viewProfilePages';
 
   @override
   Widget build(BuildContext context) {
-    final List<NavbarModel> navbars = [
-      NavbarModel(icon: "", title: "Feed", status: false),
-      NavbarModel(icon: "", title: "title", status: false),
-      NavbarModel(icon: "", title: "title", status: false),
-      NavbarModel(icon: "", title: "title", status: false),
+    final navbars = <NavbarModel>[
+      NavbarModel(icon: '', title: 'Feed', status: false),
+      NavbarModel(icon: '', title: 'title', status: false),
+      NavbarModel(icon: '', title: 'title', status: false),
+      NavbarModel(icon: '', title: 'title', status: false),
     ];
     return Scaffold(
       backgroundColor: AssetColors.skyWhite,
       appBar: const AppBarPrimary(
-        text: "My Details",
+        text: 'My Details',
       ),
       body: Column(
         children: [
@@ -44,7 +43,7 @@ class ViewProfilePages extends StatelessWidget {
                   verticalSpace(20),
                   ButtonPrimary(
                     onTap: () {},
-                    text: "Change",
+                    text: 'Change',
                     width: screenWidth(context) * 0.25,
                     height: 40,
                     color: AssetColors.primaryLightest,
@@ -56,35 +55,35 @@ class ViewProfilePages extends StatelessWidget {
                   verticalSpace(20),
                   const Divider(),
                   const ViewProfileListItem(
-                    leftText: "First Name",
-                    rightText: "Juinal",
+                    leftText: 'First Name',
+                    rightText: 'Juinal',
                   ),
                   const Divider(),
                   ViewProfileListItem(
-                    leftText: "Last Name",
-                    rightText: "Enter Last name",
+                    leftText: 'Last Name',
+                    rightText: 'Enter Last name',
                     rightStyle: AssetStyles.labelMdRegular.copyWith(
                       color: AssetColors.skyDark,
                     ),
                   ),
                   const Divider(),
                   const ViewProfileListItem(
-                    leftText: "Location",
-                    rightText: "Indonesia",
+                    leftText: 'Location',
+                    rightText: 'Indonesia',
                   ),
                   const HeaderSettingItem(
-                    title: "ACCOUNT INFORMATION",
+                    title: 'ACCOUNT INFORMATION',
                   ),
                   const ViewProfileListItem(
-                    leftText: "Email",
-                    rightText: "juinal@studioalva.co",
+                    leftText: 'Email',
+                    rightText: 'juinal@studioalva.co',
                   ),
                   const HeaderSettingItem(
-                    title: "INTERNATIONAL PREFERENCES",
+                    title: 'INTERNATIONAL PREFERENCES',
                   ),
                   ButtonTwoListItem(
-                    title: "Language",
-                    subTitle: "English",
+                    title: 'Language',
+                    subTitle: 'English',
                     onTap: () {},
                   ),
                 ],

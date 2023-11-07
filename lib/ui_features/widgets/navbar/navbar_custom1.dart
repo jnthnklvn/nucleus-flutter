@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
-import '../../../config/config.dart';
-import '../../../ui_features/model/navbar_model.dart';
+import 'package:nucleus_ui_app/config/config.dart';
+import 'package:nucleus_ui_app/ui_features/model/navbar_model.dart';
 
 class NavBarCustom1 extends StatelessWidget {
   final List<NavbarModel> data;
   final double? height;
   const NavBarCustom1({
-    super.key,
-    required this.data,
+    required this.data, super.key,
     this.height,
   });
 
@@ -39,8 +38,7 @@ class NavBarCustom1 extends StatelessWidget {
                         ),
                       ),
                     ),
-                    (e.title != "")
-                        ? Column(
+                    if (e.title != '') Column(
                             children: [
                               verticalSpace(5),
                               Text(
@@ -51,8 +49,7 @@ class NavBarCustom1 extends StatelessWidget {
                               ),
                               verticalSpace(10)
                             ],
-                          )
-                        : verticalSpace(15),
+                          ) else verticalSpace(15),
                   ],
                 ),
               ),

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import '../../../config/config.dart';
-import '../../../ui_features/pages/personalization/step/step_first.dart';
-import '../../../ui_features/pages/personalization/step/step_second.dart';
-import '../../../ui_features/widgets/appbar/appbar_primary.dart';
+import 'package:nucleus_ui_app/config/config.dart';
+import 'package:nucleus_ui_app/ui_features/pages/personalization/step/step_first.dart';
+import 'package:nucleus_ui_app/ui_features/pages/personalization/step/step_second.dart';
+import 'package:nucleus_ui_app/ui_features/widgets/appbar/appbar_primary.dart';
 
 class PersonalizationSeconPages extends StatefulWidget {
-  static const String personalizationSecondPage = "personalizationSecondPage";
+  static const String personalizationSecondPage = 'personalizationSecondPage';
   const PersonalizationSeconPages({super.key});
 
   @override
@@ -26,7 +26,7 @@ class _PersonalizationSeconPagesState extends State<PersonalizationSeconPages>
 
     currenStep = 1;
     stepWidget = [
-      StepFirstPerson(),
+      const StepFirstPerson(),
       const StepTwoPerson(),
     ];
 
@@ -69,7 +69,7 @@ class _PersonalizationSeconPagesState extends State<PersonalizationSeconPages>
                 children: [
                   LayoutBuilder(
                     builder: (context, constraint) {
-                      double step = constraint.maxWidth / maxStep;
+                      final step = constraint.maxWidth / maxStep;
 
                       return Stack(
                         children: [

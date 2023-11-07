@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import '../../../config/config.dart';
-import '../../../ui_features/widgets/appbar/appbar_primary.dart';
-import '../../../ui_features/widgets/button_primary.dart';
-import '../../../ui_features/widgets/cart/checkout_item.dart';
-import '../../../ui_features/widgets/text_button.dart';
-import '../../widgets/cart/descriotion_one_row.dart';
+import 'package:nucleus_ui_app/config/config.dart';
+import 'package:nucleus_ui_app/ui_features/widgets/appbar/appbar_primary.dart';
+import 'package:nucleus_ui_app/ui_features/widgets/button_primary.dart';
+import 'package:nucleus_ui_app/ui_features/widgets/cart/checkout_item.dart';
+import 'package:nucleus_ui_app/ui_features/widgets/cart/descriotion_one_row.dart';
+import 'package:nucleus_ui_app/ui_features/widgets/text_button.dart';
 
 class ReviewPurchasePages extends StatelessWidget {
   const ReviewPurchasePages({super.key});
-  static const String reviewPurchasePages = "reviewPurchasePages";
+  static const String reviewPurchasePages = 'reviewPurchasePages';
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +25,7 @@ class ReviewPurchasePages extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const Text(
-                      "Review Purchase",
+                      'Review Purchase',
                       style: AssetStyles.t2,
                     ),
                     verticalSpace(
@@ -33,16 +33,16 @@ class ReviewPurchasePages extends StatelessWidget {
                     ),
                     CheckOutItem(
                       onTap: () {},
-                      title: "Title",
-                      subTitle: "Caption",
+                      title: 'Title',
+                      subTitle: 'Caption',
                     ),
                     verticalSpace(
                       30,
                     ),
                     CheckOutItem(
                       onTap: () {},
-                      title: "Title",
-                      subTitle: "Caption",
+                      title: 'Title',
+                      subTitle: 'Caption',
                     ),
                     verticalSpace(30),
                     const Divider(
@@ -52,7 +52,7 @@ class ReviewPurchasePages extends StatelessWidget {
                       25,
                     ),
                     TextButtonCustom(
-                      text: "Have a gift code?",
+                      text: 'Have a gift code?',
                       onTap: () {},
                       style: AssetStyles.labelMdRegular.copyWith(
                         color: AssetColors.primaryDarkest,
@@ -68,23 +68,23 @@ class ReviewPurchasePages extends StatelessWidget {
                       25,
                     ),
                     const DescriptionOneRow(
-                      left: "Subtotal",
-                      right: "\$97.00",
+                      left: 'Subtotal',
+                      right: '\$97.00',
                     ),
                     verticalSpace(20),
                     const DescriptionOneRow(
-                      left: "Shipping & Handling",
-                      right: "\$19.99",
+                      left: 'Shipping & Handling',
+                      right: '\$19.99',
                     ),
                     verticalSpace(20),
                     const DescriptionOneRow(
-                      left: "Tax",
-                      right: "\$4.00",
+                      left: 'Tax',
+                      right: '\$4.00',
                     ),
                     verticalSpace(20),
                     const DescriptionOneRow(
-                      left: "Total",
-                      right: "\$120.00",
+                      left: 'Total',
+                      right: '\$120.00',
                       isBold: true,
                       fontSize: 18,
                     ),
@@ -97,19 +97,19 @@ class ReviewPurchasePages extends StatelessWidget {
                 text: TextSpan(
                   children: [
                     const TextSpan(
-                      text: "By clicking",
+                      text: 'By clicking',
                       style: AssetStyles.labelTinyReguler,
                     ),
                     const TextSpan(
-                      text: " “Purchase”",
+                      text: ' “Purchase”',
                       style: AssetStyles.labelSmReguler,
                     ),
                     const TextSpan(
-                      text: ", you accept the ",
+                      text: ', you accept the ',
                       style: AssetStyles.labelTinyReguler,
                     ),
                     TextSpan(
-                      text: "terms.",
+                      text: 'terms.',
                       style: AssetStyles.labelTinyReguler.copyWith(
                         color: AssetColors.primaryBase,
                         decoration: TextDecoration.underline,
@@ -123,7 +123,7 @@ class ReviewPurchasePages extends StatelessWidget {
             ButtonPrimary(
               width: screenWidth(context) * 0.9,
               onTap: () {},
-              text: "Purchase",
+              text: 'Purchase',
             ),
           ],
         ),

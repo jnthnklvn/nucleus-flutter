@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../../config/config.dart';
+import 'package:nucleus_ui_app/config/config.dart';
 
 class InputCustom extends StatelessWidget {
   final Widget? prefixIcon;
@@ -17,13 +17,12 @@ class InputCustom extends StatelessWidget {
   final double radius;
 
   const InputCustom({
-    super.key,
-    required this.controller,
+    required this.controller, super.key,
     this.prefixIcon,
     this.borderless = false,
     this.inputType = TextInputType.text,
     this.label,
-    this.hintText = "Input Number",
+    this.hintText = 'Input Number',
     this.obsecure = false,
     this.focusNode,
     this.contentPadding,

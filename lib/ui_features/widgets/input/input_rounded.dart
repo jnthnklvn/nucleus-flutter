@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../../config/asset_colors.dart';
+import 'package:nucleus_ui_app/config/asset_colors.dart';
 
 class InputVerification extends StatefulWidget {
   final bool? isActive;
@@ -58,7 +58,7 @@ class _InputVerificationState extends State<InputVerification> {
         textAlign: TextAlign.center,
         decoration: const InputDecoration(
           border: InputBorder.none,
-          counterText: "",
+          counterText: '',
         ),
       ),
     );

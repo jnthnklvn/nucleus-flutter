@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../../config/config.dart';
+import 'package:nucleus_ui_app/config/config.dart';
 
 class DescriptionOneRow extends StatelessWidget {
   final String? left;

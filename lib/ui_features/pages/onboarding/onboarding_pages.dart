@@ -1,12 +1,11 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:nucleus_ui_app/config/config.dart';
 import 'package:nucleus_ui_app/ui_features/pages/signin_signup/signin_pages_by_email.dart';
-
-import '../../../config/config.dart';
-import '../../widgets/button_primary.dart';
+import 'package:nucleus_ui_app/ui_features/widgets/button_primary.dart';
 
 class OnboardingPages extends StatefulWidget {
-  static const String onBoardingPages = "onBoardingPages";
+  static const String onBoardingPages = 'onBoardingPages';
   const OnboardingPages({super.key});
 
   @override
@@ -17,8 +16,8 @@ class _OnboardingPagesState extends State<OnboardingPages> {
   List<int> dotted = [1, 2, 4, 5];
   @override
   Widget build(BuildContext context) {
-    final Size size = MediaQuery.of(context).size;
-    double topBar = MediaQuery.of(context).padding.top;
+    final size = MediaQuery.of(context).size;
+    final topBar = MediaQuery.of(context).padding.top;
     return Scaffold(
       body: SafeArea(
         child: Container(
@@ -59,9 +58,9 @@ class _OnboardingPagesState extends State<OnboardingPages> {
                 height: 40,
               ),
               ButtonPrimary(
-                text: "Create Account",
+                text: 'Create Account',
                 onTap: () {
-                  nextScreen(SigninPagesByEmail());
+                  nextScreen(const SigninPagesByEmail());
                 },
               ),
               const SizedBox(
@@ -71,21 +70,21 @@ class _OnboardingPagesState extends State<OnboardingPages> {
                 text: TextSpan(
                   children: [
                     TextSpan(
-                      text: "Have an account?",
+                      text: 'Have an account?',
                       style: AssetStyles.labelMdRegular.copyWith(
                         color: AssetColors.inkDarker,
                         fontWeight: FontWeight.w400,
                       ),
                     ),
                     TextSpan(
-                      text: " Log in",
+                      text: ' Log in',
                       style: AssetStyles.labelMdRegular.copyWith(
                         color: AssetColors.primaryBase,
                         fontWeight: FontWeight.w500,
                       ),
                       recognizer: TapGestureRecognizer()
                         ..onTap = () {
-                          nextScreen(SigninPagesByEmail());
+                          nextScreen(const SigninPagesByEmail());
                         },
                     ),
                   ],

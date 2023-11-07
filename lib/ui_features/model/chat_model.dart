@@ -5,7 +5,7 @@
 import 'dart:convert';
 
 List<ChatModel> chatModelFromJson(String str) =>
-    List<ChatModel>.from(json.decode(str).map((x) => ChatModel.fromJson(x)));
+    List<ChatModel>.from(json.decode(str).map(ChatModel.fromJson));
 
 String chatModelToJson(List<ChatModel> data) =>
     json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
@@ -24,16 +24,16 @@ class ChatModel {
   });
 
   factory ChatModel.fromJson(Map<String, dynamic> json) => ChatModel(
-        image: json["image"],
-        tipe: json["tipe"],
-        message: json["message"],
-        status: json["status"],
+        image: json['image'],
+        tipe: json['tipe'],
+        message: json['message'],
+        status: json['status'],
       );
 
   Map<String, dynamic> toJson() => {
-        "image": image,
-        "tipe": tipe,
-        "message": message,
-        "status": status,
+        'image': image,
+        'tipe': tipe,
+        'message': message,
+        'status': status,
       };
 }

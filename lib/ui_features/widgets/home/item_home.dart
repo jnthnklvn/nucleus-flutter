@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import '../../../ui_features/model/items_model.dart';
-import '../../../config/config.dart';
+import 'package:nucleus_ui_app/config/config.dart';
+import 'package:nucleus_ui_app/ui_features/model/items_model.dart';
 
 class HomeItem extends StatelessWidget {
   const HomeItem({
-    super.key,
     required this.item,
+    super.key,
   });
 
   final ItemModel item;

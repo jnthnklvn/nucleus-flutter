@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import '../../../config/config.dart';
-import '../../../ui_features/widgets/appbar/appbar_primary.dart';
-import '../../widgets/button/button_icon_rounded_no_border.dart';
+import 'package:nucleus_ui_app/config/config.dart';
+import 'package:nucleus_ui_app/ui_features/widgets/appbar/appbar_primary.dart';
+import 'package:nucleus_ui_app/ui_features/widgets/button/button_icon_rounded_no_border.dart';
 
 class VideoCallPages extends StatelessWidget {
   const VideoCallPages({super.key});
-  static const String videoCallPages = "videoCallPages";
+  static const String videoCallPages = 'videoCallPages';
 
   @override
   Widget build(BuildContext context) {
@@ -43,14 +43,14 @@ class VideoCallPages extends StatelessWidget {
             children: [
               const Spacer(),
               Text(
-                "James Norris",
+                'James Norris',
                 style: AssetStyles.t3.copyWith(
                   color: AssetColors.skyWhite,
                 ),
               ),
               verticalSpace(10),
               Text(
-                "01:20:12",
+                '01:20:12',
                 style: AssetStyles.labelMdRegular.copyWith(
                   color: AssetColors.skyWhite,
                 ),
@@ -63,7 +63,7 @@ class VideoCallPages extends StatelessWidget {
                   children: [
                     ButtonIconRoundedNoBorder(
                       onTap: () {
-                        print("Viode");
+                        debugPrint('Viode');
                       },
                       icon: AssetPaths.iconVideo,
                     ),
@@ -76,7 +76,7 @@ class VideoCallPages extends StatelessWidget {
                         color: AssetColors.redButton,
                       ),
                       onTap: () {
-                        print("End Call");
+                        debugPrint('End Call');
                       },
                     ),
                     ButtonIconRoundedNoBorder(

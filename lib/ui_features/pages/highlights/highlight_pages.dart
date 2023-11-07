@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import '../../../config/config.dart';
-import '../../../ui_features/widgets/appbar/appbar_primary.dart';
+import 'package:nucleus_ui_app/config/config.dart';
+import 'package:nucleus_ui_app/ui_features/widgets/appbar/appbar_primary.dart';
 
 class HighLightsPages extends StatelessWidget {
   const HighLightsPages({super.key});
-  static const String highlightsPages = "highlightsPages";
+  static const String highlightsPages = 'highlightsPages';
 
   @override
   Widget build(BuildContext context) {
@@ -32,13 +32,13 @@ class HighLightsPages extends StatelessWidget {
                     children: [
                       verticalSpace(10),
                       const AppBarPrimary(
-                        text: "Highlights",
+                        text: 'Highlights',
                       ),
                       verticalSpace(30),
                       Container(
                         margin: const EdgeInsets.symmetric(horizontal: 30),
                         child: const Text(
-                          "How New York region\nbecame the new epicenter ",
+                          'How New York region\nbecame the new epicenter ',
                           style: AssetStyles.t3,
                           textAlign: TextAlign.center,
                         ),
@@ -47,7 +47,9 @@ class HighLightsPages extends StatelessWidget {
                       Container(
                         margin: const EdgeInsets.symmetric(horizontal: 30),
                         child: const Text(
-                          "Is New York City unique in the country’s\ncoronavirus fight — or is it just one of the\nfirst?",
+                          "Is New York City unique in the country's"
+                          '\ncoronavirus fight — or is it just one'
+                          ' of the\nfirst?',
                           style: AssetStyles.labelMdRegular,
                           textAlign: TextAlign.center,
                         ),
@@ -56,7 +58,7 @@ class HighLightsPages extends StatelessWidget {
                       Container(
                         margin: const EdgeInsets.symmetric(horizontal: 30),
                         child: Text(
-                          "by John Cassidy  ·  March 5, 2020",
+                          'by John Cassidy  ·  March 5, 2020',
                           style: AssetStyles.labelSmReguler
                               .copyWith(fontWeight: FontWeight.bold),
                           textAlign: TextAlign.center,

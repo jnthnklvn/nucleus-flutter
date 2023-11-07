@@ -21,7 +21,7 @@ class _PrimaryChipState extends State<PrimaryChip> {
       onTap: () async {
         isClicked = true;
         setState(() {});
-        await Future.delayed(
+        await Future<void>.delayed(
           const Duration(milliseconds: 900),
         );
         isClicked = false;
@@ -42,7 +42,7 @@ class _PrimaryChipState extends State<PrimaryChip> {
           ],
         ),
         child: Text(
-          widget.label ?? "",
+          widget.label ?? '',
           maxLines: 1,
           overflow: TextOverflow.ellipsis,
           style: AssetStyles.labelMdRegular.copyWith(

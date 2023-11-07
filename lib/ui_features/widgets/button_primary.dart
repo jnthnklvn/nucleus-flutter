@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../config/config.dart';
+import 'package:nucleus_ui_app/config/config.dart';
 
 // ignore: must_be_immutable
 class ButtonPrimary extends StatelessWidget {
@@ -9,18 +9,18 @@ class ButtonPrimary extends StatelessWidget {
   final String text;
   final TextStyle? style;
   final Color? color;
-  final Function() onTap;
+  final VoidCallback onTap;
   final double? radius;
   final bool? disable;
   EdgeInsetsGeometry? padding;
   ButtonPrimary({
+    required this.text,
+    required this.onTap,
     Key? key,
     this.height,
     this.width,
-    required this.text,
     this.style,
     this.color,
-    required this.onTap,
     this.radius = 30,
     this.padding,
     this.disable,

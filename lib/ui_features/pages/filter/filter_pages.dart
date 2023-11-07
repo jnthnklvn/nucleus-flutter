@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
-import '../../../ui_features/widgets/text_button.dart';
-import '../../../ui_features/widgets/appbar/appbar_primary.dart';
-import '../../../ui_features/widgets/button_primary.dart';
-import '../../widgets/filter/switch_custom.dart';
-import '../../../config/config.dart';
-import '../../widgets/filter/checkbox_custom.dart';
-import '../../widgets/filter/filter_combo.dart';
+import 'package:nucleus_ui_app/config/config.dart';
+import 'package:nucleus_ui_app/ui_features/widgets/appbar/appbar_primary.dart';
+import 'package:nucleus_ui_app/ui_features/widgets/button_primary.dart';
+import 'package:nucleus_ui_app/ui_features/widgets/filter/checkbox_custom.dart';
+import 'package:nucleus_ui_app/ui_features/widgets/filter/filter_combo.dart';
+import 'package:nucleus_ui_app/ui_features/widgets/filter/switch_custom.dart';
+import 'package:nucleus_ui_app/ui_features/widgets/text_button.dart';
 
 class FilterPages extends StatefulWidget {
   const FilterPages({super.key});
-  static const String filterPages = "filterPages";
+  static const String filterPages = 'filterPages';
 
   @override
   State<FilterPages> createState() => _FilterPagesState();
@@ -29,7 +29,7 @@ class _FilterPagesState extends State<FilterPages> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBarPrimary(
-        text: "Filter",
+        text: 'Filter',
         actions: [
           Container(
             margin: const EdgeInsets.only(
@@ -37,7 +37,7 @@ class _FilterPagesState extends State<FilterPages> {
               right: 25,
             ),
             child: TextButtonCustom(
-              text: "Reset",
+              text: 'Reset',
               onTap: () {},
             ),
           ),
@@ -55,8 +55,8 @@ class _FilterPagesState extends State<FilterPages> {
                 child: SingleChildScrollView(
                   child: Column(children: [
                     FilterComboBox(
-                      title: "Shop Location",
-                      subTitle: "Anywhere",
+                      title: 'Shop Location',
+                      subTitle: 'Anywhere',
                       onTap: () {},
                     ),
                     verticalSpace(15),
@@ -65,8 +65,8 @@ class _FilterPagesState extends State<FilterPages> {
                     ),
                     verticalSpace(15),
                     FilterComboBox(
-                      title: "Condition",
-                      subTitle: "",
+                      title: 'Condition',
+                      subTitle: '',
                       isActive: isCondition,
                       onTap: () {
                         setState(() {
@@ -82,7 +82,7 @@ class _FilterPagesState extends State<FilterPages> {
                         children: [
                           verticalSpace(10),
                           CheckBoxCustom(
-                            text: "New",
+                            text: 'New',
                             isChecked: isChecked[0],
                             onChange: (p0) {
                               setState(() {
@@ -92,7 +92,7 @@ class _FilterPagesState extends State<FilterPages> {
                           ),
                           verticalSpace(20),
                           CheckBoxCustom(
-                            text: "New Other",
+                            text: 'New Other',
                             isChecked: isChecked[1],
                             onChange: (p0) {
                               setState(() {
@@ -102,7 +102,7 @@ class _FilterPagesState extends State<FilterPages> {
                           ),
                           verticalSpace(20),
                           CheckBoxCustom(
-                            text: "Unused",
+                            text: 'Unused',
                             isChecked: isChecked[2],
                             onChange: (p0) {
                               setState(() {
@@ -119,8 +119,8 @@ class _FilterPagesState extends State<FilterPages> {
                     ),
                     verticalSpace(10),
                     FilterComboBox(
-                      title: "Price",
-                      subTitle: "Under \$100",
+                      title: 'Price',
+                      subTitle: 'Under \$100',
                       onTap: () {},
                     ),
                     verticalSpace(10),
@@ -129,7 +129,7 @@ class _FilterPagesState extends State<FilterPages> {
                     ),
                     verticalSpace(10),
                     SwitchCustom(
-                      text: "In Stock",
+                      text: 'In Stock',
                       isChecked: isChecked[3],
                       onChange: (p0) {
                         setState(() {
@@ -143,7 +143,7 @@ class _FilterPagesState extends State<FilterPages> {
                     ),
                     verticalSpace(10),
                     SwitchCustom(
-                      text: "Sale",
+                      text: 'Sale',
                       isChecked: isChecked[4],
                       onChange: (p0) {
                         setState(() {
@@ -158,9 +158,9 @@ class _FilterPagesState extends State<FilterPages> {
                 margin: const EdgeInsets.only(bottom: 20),
                 child: ButtonPrimary(
                   onTap: () {
-                    print("OK");
+                    debugPrint('OK');
                   },
-                  text: "Search",
+                  text: 'Search',
                   width: screenWidth(context) * 0.9,
                 ),
               ),

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import '../../../config/config.dart';
-import '../../widgets/button_primary.dart';
-import '../../widgets/text_button.dart';
+import 'package:nucleus_ui_app/config/config.dart';
+import 'package:nucleus_ui_app/ui_features/widgets/button_primary.dart';
+import 'package:nucleus_ui_app/ui_features/widgets/text_button.dart';
 
 class ConfirmationModalPages extends StatelessWidget {
   const ConfirmationModalPages({super.key});
-  static const String confirmationModalPages = "confirmationModalPages";
+  static const String confirmationModalPages = 'confirmationModalPages';
 
   @override
   Widget build(BuildContext context) {
@@ -13,17 +13,18 @@ class ConfirmationModalPages extends StatelessWidget {
       body: Center(
         child: ElevatedButton(
           onPressed: () {
-            showModalBottomSheet(
-                context: context,
-                shape: const RoundedRectangleBorder(
-                  borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(16),
-                    topRight: Radius.circular(16),
-                  ),
+            showModalBottomSheet<void>(
+              context: context,
+              shape: const RoundedRectangleBorder(
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(16),
+                  topRight: Radius.circular(16),
                 ),
-                builder: (context) => const ModalConfirmationBody());
+              ),
+              builder: (context) => const ModalConfirmationBody(),
+            );
           },
-          child: const Text("Show Modal"),
+          child: const Text('Show Modal'),
         ),
       ),
     );
@@ -62,12 +63,12 @@ class ModalConfirmationBody extends StatelessWidget {
             child: Column(
               children: [
                 const Text(
-                  "Remove Item ?",
+                  'Remove Item ?',
                   style: AssetStyles.t3,
                 ),
                 verticalSpace(20),
                 const Text(
-                  "Are you sure want to remove this item from\nyour cart?",
+                  'Are you sure want to remove this item from\nyour cart?',
                   style: AssetStyles.labelMdRegular,
                   textAlign: TextAlign.center,
                 ),
@@ -75,13 +76,13 @@ class ModalConfirmationBody extends StatelessWidget {
                 verticalSpace(40),
                 ButtonPrimary(
                   onTap: () {},
-                  text: "Remove Item",
+                  text: 'Remove Item',
                   height: 40,
                   width: screenWidth(context) * 0.9,
                 ),
                 verticalSpace(20),
                 TextButtonCustom(
-                  text: "Cancel",
+                  text: 'Cancel',
                   style: AssetStyles.labelMdRegular,
                   onTap: () {},
                 ),

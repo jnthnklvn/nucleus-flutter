@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import '../../../config/config.dart';
+import 'package:nucleus_ui_app/config/config.dart';
 
 class ButtonSettingItemNoIcon extends StatelessWidget {
   final String text;
-  final Function()? onTap;
+  final VoidCallback? onTap;
   const ButtonSettingItemNoIcon({
-    super.key,
     required this.text,
+    super.key,
     this.onTap,
   });
 

@@ -1,14 +1,11 @@
 import 'package:flutter/material.dart';
-import '../../../config/config.dart';
-import '../../model/sort_model.dart';
+import 'package:nucleus_ui_app/config/config.dart';
+import 'package:nucleus_ui_app/ui_features/model/sort_model.dart';
 
 class SizeItemList extends StatelessWidget {
-  SizeItemList({
-    super.key,
-    required this.data,
-  });
+  const SizeItemList({required this.data, super.key});
 
-  SortModel data;
+  final SortModel data;
 
   @override
   Widget build(BuildContext context) {

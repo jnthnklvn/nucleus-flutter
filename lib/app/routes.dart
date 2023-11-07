@@ -1,41 +1,40 @@
 import 'package:flutter/material.dart';
+import 'package:nucleus_ui_app/ui_features/pages/bottom_sheet/add_to_cart_pages.dart';
+import 'package:nucleus_ui_app/ui_features/pages/checkout/checkout_pages.dart';
+import 'package:nucleus_ui_app/ui_features/pages/checkout/review_purchase_pages.dart';
+import 'package:nucleus_ui_app/ui_features/pages/contents/content_post_detail.dart';
+import 'package:nucleus_ui_app/ui_features/pages/contents/contents_detail.dart';
+import 'package:nucleus_ui_app/ui_features/pages/coverages/discover_explore.dart';
+import 'package:nucleus_ui_app/ui_features/pages/empty_state/empty_state_pages.dart';
+import 'package:nucleus_ui_app/ui_features/pages/filter/filter_pages.dart';
+import 'package:nucleus_ui_app/ui_features/pages/highlights/highlight_pages.dart';
+import 'package:nucleus_ui_app/ui_features/pages/home/all_items_pages.dart';
+import 'package:nucleus_ui_app/ui_features/pages/home/chat_pages.dart';
+import 'package:nucleus_ui_app/ui_features/pages/home/inbox_pages_1.dart';
+import 'package:nucleus_ui_app/ui_features/pages/home/main_home.dart';
+import 'package:nucleus_ui_app/ui_features/pages/home/main_home_pages1.dart';
+import 'package:nucleus_ui_app/ui_features/pages/launchscreen/get_started_pages.dart';
+import 'package:nucleus_ui_app/ui_features/pages/location/location_pages.dart';
+import 'package:nucleus_ui_app/ui_features/pages/map/map_pages.dart';
 import 'package:nucleus_ui_app/ui_features/pages/menu_pages.dart';
-
-import '../ui_features/pages/bottom_sheet/add_to_cart_pages.dart';
-import '../ui_features/pages/checkout/checkout_pages.dart';
-import '../ui_features/pages/checkout/review_purchase_pages.dart';
-import '../ui_features/pages/contents/content_post_detail.dart';
-import '../ui_features/pages/contents/contents_detail.dart';
-import '../ui_features/pages/coverages/discover_explore.dart';
-import '../ui_features/pages/empty_state/empty_state_pages.dart';
-import '../ui_features/pages/filter/filter_pages.dart';
-import '../ui_features/pages/highlights/highlight_pages.dart';
-import '../ui_features/pages/home/all_items_pages.dart';
-import '../ui_features/pages/home/chat_pages.dart';
-import '../ui_features/pages/home/inbox_pages_1.dart';
-import '../ui_features/pages/home/main_home.dart';
-import '../ui_features/pages/home/main_home_pages1.dart';
-import '../ui_features/pages/launchscreen/get_started_pages.dart';
-import '../ui_features/pages/location/location_pages.dart';
-import '../ui_features/pages/map/map_pages.dart';
-import '../ui_features/pages/modal/confirmation_modal_pages.dart';
-import '../ui_features/pages/modal/filter_modal_pages.dart';
-import '../ui_features/pages/modal/info_modal_pages.dart';
-import '../ui_features/pages/modal/sort_modal_pages.dart';
-import '../ui_features/pages/onboarding/onboarding_pages.dart';
-import '../ui_features/pages/personalization/personalization_first_page.dart';
-import '../ui_features/pages/personalization/personalization_second_page.dart';
-import '../ui_features/pages/product/product_detail_pages.dart';
-import '../ui_features/pages/search/search_pages.dart';
-import '../ui_features/pages/search/search_result.dart';
-import '../ui_features/pages/settings/account_setting_pages.dart';
-import '../ui_features/pages/settings/main_setting_pages.dart';
-import '../ui_features/pages/settings/view_profile_pages.dart';
-import '../ui_features/pages/signin_signup/signin_pages_by_email.dart';
-import '../ui_features/pages/signin_signup/signin_pages_by_number.dart';
-import '../ui_features/pages/subscription/subscription_pages.dart';
-import '../ui_features/pages/verification/verification_pages.dart';
-import '../ui_features/pages/video_call/video_call_pages.dart';
+import 'package:nucleus_ui_app/ui_features/pages/modal/confirmation_modal_pages.dart';
+import 'package:nucleus_ui_app/ui_features/pages/modal/filter_modal_pages.dart';
+import 'package:nucleus_ui_app/ui_features/pages/modal/info_modal_pages.dart';
+import 'package:nucleus_ui_app/ui_features/pages/modal/sort_modal_pages.dart';
+import 'package:nucleus_ui_app/ui_features/pages/onboarding/onboarding_pages.dart';
+import 'package:nucleus_ui_app/ui_features/pages/personalization/personalization_first_page.dart';
+import 'package:nucleus_ui_app/ui_features/pages/personalization/personalization_second_page.dart';
+import 'package:nucleus_ui_app/ui_features/pages/product/product_detail_pages.dart';
+import 'package:nucleus_ui_app/ui_features/pages/search/search_pages.dart';
+import 'package:nucleus_ui_app/ui_features/pages/search/search_result.dart';
+import 'package:nucleus_ui_app/ui_features/pages/settings/account_setting_pages.dart';
+import 'package:nucleus_ui_app/ui_features/pages/settings/main_setting_pages.dart';
+import 'package:nucleus_ui_app/ui_features/pages/settings/view_profile_pages.dart';
+import 'package:nucleus_ui_app/ui_features/pages/signin_signup/signin_pages_by_email.dart';
+import 'package:nucleus_ui_app/ui_features/pages/signin_signup/signin_pages_by_number.dart';
+import 'package:nucleus_ui_app/ui_features/pages/subscription/subscription_pages.dart';
+import 'package:nucleus_ui_app/ui_features/pages/verification/verification_pages.dart';
+import 'package:nucleus_ui_app/ui_features/pages/video_call/video_call_pages.dart';
 
 Map<String, Widget Function(BuildContext)> routes = {
   GetStartedPages.launshScreen: (context) => const GetStartedPages(),
@@ -80,7 +79,7 @@ Map<String, Widget Function(BuildContext)> routes = {
   SubScriptionPages.subscriptionPages: (context) => const SubScriptionPages(),
   ProductDetailPages.productDetailPages: (context) =>
       const ProductDetailPages(),
-  MenuHome.menuPagesAll: (context) => MenuHome(),
+  MenuHome.menuPagesAll: (context) => const MenuHome(),
 };
 
 String initialRoutes = MenuHome.menuPagesAll;
@@ -125,140 +124,140 @@ final List<String> halaman = [
 
 final List<Map<String, dynamic>> pages = [
   {
-    "title": GetStartedPages.launshScreen,
-    "page": const GetStartedPages(),
+    'title': GetStartedPages.launshScreen,
+    'page': const GetStartedPages(),
   },
   {
-    "title": OnboardingPages.onBoardingPages,
-    "page": const OnboardingPages(),
+    'title': OnboardingPages.onBoardingPages,
+    'page': const OnboardingPages(),
   },
   {
-    "title": SigninPagesByEmail.signEmail,
-    "page": const SigninPagesByEmail(),
+    'title': SigninPagesByEmail.signEmail,
+    'page': const SigninPagesByEmail(),
   },
   {
-    "title": SignInPagesByNumber.signInNumber,
-    "page": const SignInPagesByNumber()
+    'title': SignInPagesByNumber.signInNumber,
+    'page': const SignInPagesByNumber()
   },
   {
-    "title": VerificationPages.verificationPages,
-    "page": const VerificationPages()
+    'title': VerificationPages.verificationPages,
+    'page': const VerificationPages()
   },
   {
-    "title": PersonalizationFirstPage.personalizationFirstPage,
-    "page": const PersonalizationFirstPage()
+    'title': PersonalizationFirstPage.personalizationFirstPage,
+    'page': const PersonalizationFirstPage()
   },
   {
-    "title": PersonalizationSeconPages.personalizationSecondPage,
-    "page": const PersonalizationSeconPages()
+    'title': PersonalizationSeconPages.personalizationSecondPage,
+    'page': const PersonalizationSeconPages()
   },
   {
-    "title": ChooseLocationPages.locationPages,
-    "page": const ChooseLocationPages()
+    'title': ChooseLocationPages.locationPages,
+    'page': const ChooseLocationPages()
   },
   {
-    "title": HomeAllItemsPages.homeAllItemsPages,
-    "page": const HomeAllItemsPages()
+    'title': HomeAllItemsPages.homeAllItemsPages,
+    'page': const HomeAllItemsPages()
   },
   {
-    "title": MainHomePages.mainHomePages,
-    "page": const MainHomePages(),
+    'title': MainHomePages.mainHomePages,
+    'page': const MainHomePages(),
   },
   {
-    "title": InboxPages1.inboxPages,
-    "page": InboxPages1(),
+    'title': InboxPages1.inboxPages,
+    'page': InboxPages1(),
   },
   {
-    "title": HomePages1.homePages,
-    "page": HomePages1(),
+    'title': HomePages1.homePages,
+    'page': HomePages1(),
   },
   {
-    "title": DiscoverExplorePages.discoverPages,
-    "page": DiscoverExplorePages(),
+    'title': DiscoverExplorePages.discoverPages,
+    'page': DiscoverExplorePages(),
   },
   {
-    "title": ContentDetailPages.contentDetail,
-    "page": const ContentDetailPages()
+    'title': ContentDetailPages.contentDetail,
+    'page': const ContentDetailPages()
   },
-  {"title": HighLightsPages.highlightsPages, "page": const HighLightsPages()},
+  {'title': HighLightsPages.highlightsPages, 'page': const HighLightsPages()},
   {
-    "title": ContentDetailPostPages.contentPostDetail,
-    "page": ContentDetailPostPages()
-  },
-  {
-    "title": SearchPages.searchPages,
-    "page": SearchPages(),
+    'title': ContentDetailPostPages.contentPostDetail,
+    'page': ContentDetailPostPages()
   },
   {
-    "title": SearchResultPgaes.searchResult,
-    "page": const SearchResultPgaes(),
+    'title': SearchPages.searchPages,
+    'page': SearchPages(),
   },
   {
-    "title": AddToCartPages.addToCartPages,
-    "page": const AddToCartPages(),
+    'title': SearchResultPgaes.searchResult,
+    'page': const SearchResultPgaes(),
   },
   {
-    "title": EmptyStatePages.emptyStatePages,
-    "page": EmptyStatePages(),
+    'title': AddToCartPages.addToCartPages,
+    'page': const AddToCartPages(),
   },
   {
-    "title": MapPages.mapPages,
-    "page": const MapPages(),
+    'title': EmptyStatePages.emptyStatePages,
+    'page': EmptyStatePages(),
   },
   {
-    "title": FilterPages.filterPages,
-    "page": const FilterPages(),
+    'title': MapPages.mapPages,
+    'page': const MapPages(),
   },
   {
-    "title": ReviewPurchasePages.reviewPurchasePages,
-    "page": const ReviewPurchasePages()
+    'title': FilterPages.filterPages,
+    'page': const FilterPages(),
   },
   {
-    "title": CheckoutPages.checkoutPages,
-    "page": const CheckoutPages(),
+    'title': ReviewPurchasePages.reviewPurchasePages,
+    'page': const ReviewPurchasePages()
   },
   {
-    "title": MainSettingPages.mainSettingPages,
-    "page": const MainSettingPages()
+    'title': CheckoutPages.checkoutPages,
+    'page': const CheckoutPages(),
   },
   {
-    "title": AccountSettingPages.accountSettingPages,
-    "page": const AccountSettingPages(),
+    'title': MainSettingPages.mainSettingPages,
+    'page': const MainSettingPages()
   },
   {
-    "title": ViewProfilePages.viewProfilePages,
-    "page": const ViewProfilePages(),
+    'title': AccountSettingPages.accountSettingPages,
+    'page': const AccountSettingPages(),
   },
   {
-    "title": InfoModalPages.infoModalPages,
-    "page": const InfoModalPages(),
+    'title': ViewProfilePages.viewProfilePages,
+    'page': const ViewProfilePages(),
   },
   {
-    "title": ConfirmationModalPages.confirmationModalPages,
-    "page": const ConfirmationModalPages(),
+    'title': InfoModalPages.infoModalPages,
+    'page': const InfoModalPages(),
   },
   {
-    "title": SortModalPages.sortModalPages,
-    "page": SortModalPages(),
+    'title': ConfirmationModalPages.confirmationModalPages,
+    'page': const ConfirmationModalPages(),
   },
   {
-    "title": FilterModalPages.filterModalPages,
-    "page": FilterModalPages(),
+    'title': SortModalPages.sortModalPages,
+    'page': SortModalPages(),
   },
   {
-    "title": ChatPages.chatPages,
-    "page": ChatPages(),
+    'title': FilterModalPages.filterModalPages,
+    'page': FilterModalPages(),
   },
   {
-    "title": VideoCallPages.videoCallPages,
-    "page": const VideoCallPages(),
+    'title': ChatPages.chatPages,
+    'page': ChatPages(),
   },
   {
-    "title": SubScriptionPages.subscriptionPages,
-    "page": const SubScriptionPages()
+    'title': VideoCallPages.videoCallPages,
+    'page': const VideoCallPages(),
   },
   {
-    "title": ProductDetailPages.productDetailPages,
-    "page": const ProductDetailPages()
+    'title': SubScriptionPages.subscriptionPages,
+    'page': const SubScriptionPages()
+  },
+  {
+    'title': ProductDetailPages.productDetailPages,
+    'page': const ProductDetailPages()
   }
 ];

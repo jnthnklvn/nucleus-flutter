@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:nucleus_ui_app/config/asset_colors.dart';
 import 'package:nucleus_ui_app/config/asset_styles.dart';
-
-import '../../../config/asset_colors.dart';
 
 class SelectItem1 extends StatelessWidget {
   final bool? border;
@@ -10,15 +9,15 @@ class SelectItem1 extends StatelessWidget {
   final TextStyle? style;
   final EdgeInsetsGeometry? padding;
   final EdgeInsetsGeometry? margin;
-  final Function()? onTap;
+  final VoidCallback? onTap;
   final bool? isActive;
   final AlignmentGeometry? alignment;
   final Color? bgSecond;
   const SelectItem1({
+    required this.text,
     super.key,
     this.border = false,
     this.alignment,
-    required this.text,
     this.bgColor,
     this.style,
     this.padding,

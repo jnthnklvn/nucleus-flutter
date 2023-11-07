@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import '../../../config/asset_styles.dart';
-import '../../../ui_features/model/categories_model.dart';
+import 'package:nucleus_ui_app/config/asset_styles.dart';
+import 'package:nucleus_ui_app/ui_features/model/categories_model.dart';
 
 class CategoryItem extends StatelessWidget {
-  const CategoryItem({super.key, required this.categories});
+  const CategoryItem({required this.categories, super.key});
 
   final Categories categories;
 

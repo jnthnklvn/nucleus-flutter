@@ -5,7 +5,7 @@
 import 'dart:convert';
 
 List<SortModel> sortModelFromJson(String str) =>
-    List<SortModel>.from(json.decode(str).map((x) => SortModel.fromJson(x)));
+    List<SortModel>.from(json.decode(str).map(SortModel.fromJson));
 
 String sortModelToJson(List<SortModel> data) =>
     json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
@@ -20,12 +20,12 @@ class SortModel {
   });
 
   factory SortModel.fromJson(Map<String, dynamic> json) => SortModel(
-        name: json["name"],
-        status: json["status"],
+        name: json['name'],
+        status: json['status'],
       );
 
   Map<String, dynamic> toJson() => {
-        "name": name,
-        "status": status,
+        'name': name,
+        'status': status,
       };
 }

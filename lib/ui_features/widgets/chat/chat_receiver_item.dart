@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 
-import '../../../config/config.dart';
-import '../../model/chat_model.dart';
+import 'package:nucleus_ui_app/config/config.dart';
+import 'package:nucleus_ui_app/ui_features/model/chat_model.dart';
 
 class ChatReceiverItem extends StatelessWidget {
   const ChatReceiverItem({
-    super.key,
-    required this.data,
+    required this.data, super.key,
   });
 
   final ChatModel data;
@@ -24,8 +23,7 @@ class ChatReceiverItem extends StatelessWidget {
             ),
           ),
           horizontalSpace(10),
-          (data.status == 1)
-              ? Container(
+          if (data.status == 1) Container(
                   padding: const EdgeInsets.symmetric(
                     vertical: 10,
                     horizontal: 15,
@@ -38,9 +36,8 @@ class ChatReceiverItem extends StatelessWidget {
                     data.message,
                     style: AssetStyles.labelMdRegular,
                   ),
-                )
-              : Text(
-                  "Typing...",
+                ) else Text(
+                  'Typing...',
                   style: AssetStyles.labelMdMdReg.copyWith(
                     color: AssetColors.textGrey,
                   ),

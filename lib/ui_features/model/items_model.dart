@@ -5,13 +5,15 @@
 import 'dart:convert';
 
 List<List<ItemModel>> itemModelFromJson(String str) =>
-    List<List<ItemModel>>.from(json
-        .decode(str)
-        .map((x) => List<ItemModel>.from(x.map((x) => ItemModel.fromJson(x)))));
+    List<List<Map<String, dynamic>>>.from(json.decode(str))
+        .map((x) => List<ItemModel>.from(x.map(ItemModel.fromJson)))
+        .toList();
 
-String itemModelToJson(List<List<ItemModel>> data) =>
-    json.encode(List<dynamic>.from(
-        data.map((x) => List<dynamic>.from(x.map((x) => x.toJson())))));
+String itemModelToJson(List<List<ItemModel>> data) => json.encode(
+      List<dynamic>.from(
+        data.map((x) => List<dynamic>.from(x.map((x) => x.toJson()))),
+      ),
+    );
 
 class ItemModel {
   String images;
@@ -23,12 +25,12 @@ class ItemModel {
   });
 
   factory ItemModel.fromJson(Map<String, dynamic> json) => ItemModel(
-        images: json["images"],
-        name: json["name"],
+        images: json['images'],
+        name: json['name'],
       );
 
   Map<String, dynamic> toJson() => {
-        "images": images,
-        "name": name,
+        'images': images,
+        'name': name,
       };
 }

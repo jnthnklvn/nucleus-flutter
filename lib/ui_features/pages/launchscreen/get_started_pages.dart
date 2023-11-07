@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
-import '../../../config/config.dart';
-import '../../../ui_features/pages/onboarding/onboarding_pages.dart';
-import '../../../ui_features/widgets/button_primary.dart';
+import 'package:nucleus_ui_app/config/config.dart';
+import 'package:nucleus_ui_app/ui_features/pages/onboarding/onboarding_pages.dart';
+import 'package:nucleus_ui_app/ui_features/widgets/button_primary.dart';
 
 class GetStartedPages extends StatelessWidget {
-  static const String launshScreen = "launchScreen";
+  static const String launshScreen = 'launchScreen';
   const GetStartedPages({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final Size size = MediaQuery.of(context).size;
+    final size = MediaQuery.of(context).size;
     return Scaffold(
       body: Container(
         decoration: const BoxDecoration(
@@ -43,14 +43,14 @@ class GetStartedPages extends StatelessWidget {
                       child: Column(
                         children: [
                           Text(
-                            "Keepyoga",
+                            'Keepyoga',
                             style: AssetStyles.h2.copyWith(
                                 color: AssetColors.inkDarkest.withOpacity(0.3)),
                           ),
                           Container(
                             margin: const EdgeInsets.all(20),
                             child: const Text(
-                              "Practice yoga whenever you want",
+                              'Practice yoga whenever you want',
                               style: AssetStyles.h1,
                               textAlign: TextAlign.center,
                             ),
@@ -61,7 +61,7 @@ class GetStartedPages extends StatelessWidget {
                     ButtonPrimary(
                       height: 50,
                       width: size.width * 0.8,
-                      text: "Get Started",
+                      text: 'Get Started',
                       style: AssetStyles.labelButtonPrimary.copyWith(
                         color: AssetColors.inkDarkest,
                         fontWeight: FontWeight.bold,

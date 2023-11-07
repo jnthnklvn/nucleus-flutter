@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import '../../../config/config.dart';
+import 'package:nucleus_ui_app/config/config.dart';
 
 class ButtonIconRounded extends StatelessWidget {
-  String icon;
-  double? width, height;
-  Function() onTap;
-  Color? color;
-  ButtonIconRounded({
-    super.key,
+  final String icon;
+  final double? width, height;
+  final VoidCallback onTap;
+  final Color? color;
+  const ButtonIconRounded({
     required this.icon,
     required this.onTap,
+    super.key,
     this.width = 50,
     this.height = 50,
     this.color,

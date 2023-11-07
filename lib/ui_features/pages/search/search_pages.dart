@@ -1,41 +1,41 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import '../../../config/config.dart';
-import '../../model/categories_model.dart';
-import '../../model/navbar_model.dart';
-import '../../../ui_features/widgets/input/categori_item.dart';
-import '../../../ui_features/widgets/input/input_custom.dart';
-import '../../../ui_features/widgets/navbar/navbar_custom1.dart';
+import 'package:nucleus_ui_app/config/config.dart';
+import 'package:nucleus_ui_app/ui_features/model/categories_model.dart';
+import 'package:nucleus_ui_app/ui_features/model/navbar_model.dart';
+import 'package:nucleus_ui_app/ui_features/widgets/input/categori_item.dart';
+import 'package:nucleus_ui_app/ui_features/widgets/input/input_custom.dart';
+import 'package:nucleus_ui_app/ui_features/widgets/navbar/navbar_custom1.dart';
 
 class SearchPages extends StatelessWidget {
   SearchPages({super.key});
-  static const String searchPages = "searchPages";
+  static const String searchPages = 'searchPages';
 
   final List<Categories> category = [
-    Categories(category: "Asian"),
-    Categories(category: "Breakfast"),
-    Categories(category: "Burger"),
-    Categories(category: "Chicken"),
-    Categories(category: "Chinese"),
-    Categories(category: "Sweets"),
+    Categories(category: 'Asian'),
+    Categories(category: 'Breakfast'),
+    Categories(category: 'Burger'),
+    Categories(category: 'Chicken'),
+    Categories(category: 'Chinese'),
+    Categories(category: 'Sweets'),
   ];
 
   final List<Categories> recent = [
-    Categories(category: "Burger King"),
-    Categories(category: "Gong Cha"),
+    Categories(category: 'Burger King'),
+    Categories(category: 'Gong Cha'),
   ];
 
   final List<NavbarModel> navbars = [
-    NavbarModel(icon: "", title: "feed", status: false),
-    NavbarModel(icon: "", title: "title", status: false),
-    NavbarModel(icon: "", title: "title", status: false),
-    NavbarModel(icon: "", title: "title", status: false),
-    NavbarModel(icon: "", title: "title", status: false),
+    NavbarModel(icon: '', title: 'feed', status: false),
+    NavbarModel(icon: '', title: 'title', status: false),
+    NavbarModel(icon: '', title: 'title', status: false),
+    NavbarModel(icon: '', title: 'title', status: false),
+    NavbarModel(icon: '', title: 'title', status: false),
   ];
 
   @override
   Widget build(BuildContext context) {
-    TextEditingController search = TextEditingController();
+    final search = TextEditingController();
     return Scaffold(
       body: Container(
         margin: const EdgeInsets.only(top: 20, left: 20, right: 20),
@@ -58,7 +58,7 @@ class SearchPages extends StatelessWidget {
                   fit: BoxFit.scaleDown,
                 ),
                 borderless: true,
-                hintText: "Search",
+                hintText: 'Search',
               ),
               verticalSpace(24),
               Expanded(
@@ -68,7 +68,7 @@ class SearchPages extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        "Recent Search",
+                        'Recent Search',
                         style: AssetStyles.labelMdRegular.copyWith(
                           fontWeight: FontWeight.bold,
                         ),
@@ -81,7 +81,7 @@ class SearchPages extends StatelessWidget {
                           .toList(),
                       verticalSpace(20),
                       Text(
-                        "Categories",
+                        'Categories',
                         style: AssetStyles.labelMdRegular.copyWith(
                           fontWeight: FontWeight.bold,
                         ),

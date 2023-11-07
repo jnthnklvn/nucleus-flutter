@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import '../../../config/config.dart';
+import 'package:nucleus_ui_app/config/config.dart';
 
 class CoveragesItem extends StatelessWidget {
   const CoveragesItem({
-    super.key,
-    required this.data,
+    required this.data, super.key,
   });
 
   final Map<String, String> data;
@@ -27,14 +26,14 @@ class CoveragesItem extends StatelessWidget {
                         height: 24,
                         decoration: BoxDecoration(
                           image: DecorationImage(
-                            image: AssetImage(data["icon"]!),
+                            image: AssetImage(data['icon']!),
                           ),
                         ),
                       ),
                       horizontalSpace(10),
                       Flexible(
                         child: Text(
-                          data["organization"]!,
+                          data['organization']!,
                           style: AssetStyles.labelSmReguler,
                         ),
                       ),
@@ -44,7 +43,7 @@ class CoveragesItem extends StatelessWidget {
                   Container(
                     margin: const EdgeInsets.only(right: 5),
                     child: Text(
-                      data["title"]!,
+                      data['title']!,
                       style: AssetStyles.labelLgRegular.copyWith(
                         fontWeight: FontWeight.bold,
                       ),
@@ -61,7 +60,7 @@ class CoveragesItem extends StatelessWidget {
               height: 100,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage(data["imgThumb"]!),
+                  image: AssetImage(data['imgThumb']!),
                 ),
               ),
             ),
@@ -72,7 +71,7 @@ class CoveragesItem extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(
-              data["time"]!,
+              data['time']!,
               style: AssetStyles.labelTinyReguler.copyWith(
                 color: AssetColors.inkLight,
               ),
@@ -95,19 +94,17 @@ class CoveragesItem extends StatelessWidget {
             )
           ],
         ),
-        (data["desc"] != '')
-            ? Column(
+        if (data['desc'] != '') Column(
                 children: [
                   verticalSpace(20),
                   Text(
-                    data["desc"]!,
+                    data['desc']!,
                     style: AssetStyles.labelSmReguler,
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
                   ),
                 ],
-              )
-            : Container(),
+              ) else Container(),
         verticalSpace(24),
         const Divider(
           height: 0.5,

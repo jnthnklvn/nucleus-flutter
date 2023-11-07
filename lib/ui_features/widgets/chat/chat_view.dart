@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
-import '../../../config/config.dart';
-import 'chat_person_item.dart';
+import 'package:nucleus_ui_app/config/config.dart';
+import 'package:nucleus_ui_app/ui_features/widgets/chat/chat_person_item.dart';
 
 class ChatView extends StatelessWidget {
   const ChatView({
-    super.key,
-    required this.data,
-    required this.read,
+    required this.data, required this.read, super.key,
   });
 
   final List<Map<String, dynamic>> data;
@@ -19,7 +17,7 @@ class ChatView extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                read ? "Others" : "Unread - ${data.length}",
+                read ? 'Others' : 'Unread - ${data.length}',
                 style: AssetStyles.labelMdRegular.copyWith(
                   fontWeight: FontWeight.bold,
                 ),
@@ -28,7 +26,7 @@ class ChatView extends StatelessWidget {
               verticalSpace(20),
               Column(
                 children: data
-                    .where((element) => element["read"] == read)
+                    .where((element) => element['read'] == read)
                     .map(
                       (e) => ChatPersonItem(
                         dataChat: e,

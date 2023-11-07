@@ -4,10 +4,10 @@ import 'package:nucleus_ui_app/config/asset_colors.dart';
 
 class IndicatorImageProduct extends StatelessWidget {
   const IndicatorImageProduct({
-    super.key,
     required this.imgList,
     required this.controller,
     required this.current,
+    super.key,
   });
 
   final List<String> imgList;

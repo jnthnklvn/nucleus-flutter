@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import '../../../config/config.dart';
+import 'package:nucleus_ui_app/config/config.dart';
 
 class OnBoardingFirstPage extends StatelessWidget {
   final BoxConstraints constraints;
-  const OnBoardingFirstPage({super.key, required this.constraints});
+  const OnBoardingFirstPage({required this.constraints, super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,11 +17,11 @@ class OnBoardingFirstPage extends StatelessWidget {
             text: TextSpan(
               children: [
                 const TextSpan(
-                  text: "you",
+                  text: 'you',
                   style: AssetStyles.t3,
                 ),
                 TextSpan(
-                  text: "learn",
+                  text: 'learn',
                   style: AssetStyles.t3.copyWith(
                     color: AssetColors.primaryBase,
                   ),
@@ -36,7 +36,7 @@ class OnBoardingFirstPage extends StatelessWidget {
             ),
           ),
           const Text(
-            "Create brilliant learning pathways",
+            'Create brilliant learning pathways',
             style: AssetStyles.t3,
             textAlign: TextAlign.center,
           ),

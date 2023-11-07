@@ -5,7 +5,7 @@
 import 'dart:convert';
 
 List<Place> placeFromJson(String str) =>
-    List<Place>.from(json.decode(str).map((x) => Place.fromJson(x)));
+    List<Place>.from(json.decode(str).map(Place.fromJson));
 
 String placeToJson(List<Place> data) =>
     json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
@@ -28,20 +28,20 @@ class Place {
   });
 
   factory Place.fromJson(Map<String, dynamic> json) => Place(
-        title: json["title"],
-        subtitle: json["subtitle"],
-        price: json["price"],
-        time: json["time"],
-        rating: json["rating"]?.toDouble(),
-        images: json["images"],
+        title: json['title'],
+        subtitle: json['subtitle'],
+        price: json['price'],
+        time: json['time'],
+        rating: json['rating']?.toDouble(),
+        images: json['images'],
       );
 
   Map<String, dynamic> toJson() => {
-        "title": title,
-        "subtitle": subtitle,
-        "price": price,
-        "time": time,
-        "rating": rating,
-        "images": images,
+        'title': title,
+        'subtitle': subtitle,
+        'price': price,
+        'time': time,
+        'rating': rating,
+        'images': images,
       };
 }

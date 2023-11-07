@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 
-import '../../../config/config.dart';
+import 'package:nucleus_ui_app/config/config.dart';
 
 class ThumbnailImg1 extends StatelessWidget {
   final double? width;
   final Widget? widget;
   const ThumbnailImg1({
-    super.key,
-    required this.data,
+    required this.data, super.key,
     this.width,
     this.widget,
   });
@@ -31,20 +30,20 @@ class ThumbnailImg1 extends StatelessWidget {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(16),
                   image: DecorationImage(
-                    image: AssetImage(data["images"]!),
+                    image: AssetImage(data['images']!),
                     fit: BoxFit.cover,
                   ),
                 ),
               ),
               verticalSpace(10),
               Text(
-                data["title"]!,
+                data['title']!,
                 style: AssetStyles.labelMdRegular
                     .copyWith(fontWeight: FontWeight.bold),
               ),
               verticalSpace(10),
               Text(
-                data["desc"]!,
+                data['desc']!,
                 style: AssetStyles.labelTinyReguler.copyWith(
                   fontWeight: FontWeight.normal,
                   color: AssetColors.inkLight,

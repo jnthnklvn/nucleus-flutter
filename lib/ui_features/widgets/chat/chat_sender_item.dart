@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 
-import '../../../config/config.dart';
-import '../../model/chat_model.dart';
+import 'package:nucleus_ui_app/config/config.dart';
+import 'package:nucleus_ui_app/ui_features/model/chat_model.dart';
 
 class ChatSenderItem extends StatelessWidget {
   const ChatSenderItem({
-    super.key,
-    required this.data,
+    required this.data, super.key,
   });
 
   final ChatModel data;

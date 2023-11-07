@@ -1,25 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:nucleus_ui_app/config/config.dart';
 import 'package:nucleus_ui_app/ui_features/model/navbar_model.dart';
-import '../../../ui_features/widgets/appbar/appbar_primary.dart';
-import '../../../ui_features/widgets/button_primary.dart';
-import '../../../config/config.dart';
-import '../../widgets/navbar/navbar_custom1.dart';
+import 'package:nucleus_ui_app/ui_features/widgets/appbar/appbar_primary.dart';
+import 'package:nucleus_ui_app/ui_features/widgets/button_primary.dart';
+import 'package:nucleus_ui_app/ui_features/widgets/navbar/navbar_custom1.dart';
 
 class EmptyStatePages extends StatelessWidget {
   EmptyStatePages({super.key});
-  static const String emptyStatePages = "emptyStatePages";
+  static const String emptyStatePages = 'emptyStatePages';
 
   final List<NavbarModel> navbars = [
-    NavbarModel(icon: "", title: "", status: true),
-    NavbarModel(icon: "", title: "", status: true),
-    NavbarModel(icon: "", title: "", status: false),
+    NavbarModel(icon: '', title: '', status: true),
+    NavbarModel(icon: '', title: '', status: true),
+    NavbarModel(icon: '', title: '', status: false),
   ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBarPrimary(
         disableBack: true,
-        text: "Saved Items",
+        text: 'Saved Items',
         textStyle: AssetStyles.h3.copyWith(
           fontWeight: FontWeight.w500,
           color: Colors.black,
@@ -37,22 +37,23 @@ class EmptyStatePages extends StatelessWidget {
                     image: AssetImage(AssetPaths.imageEmpty),
                   ),
                   Text(
-                    "No Saved Items",
+                    'No Saved Items',
                     style: AssetStyles.labelLgRegular
                         .copyWith(fontWeight: FontWeight.bold),
                   ),
                   verticalSpace(15),
                   const Text(
-                    "Tap the heart icon near any product\nand we’ll save it here for you.",
+                    "Tap the heart icon near any product\nand we'll save it"
+                    ' here for you.',
                     style: AssetStyles.labelSmReguler,
                     textAlign: TextAlign.center,
                   ),
                   verticalSpace(25),
                   ButtonPrimary(
                     onTap: () {
-                      print("Discover");
+                      debugPrint('Discover');
                     },
-                    text: "Discover",
+                    text: 'Discover',
                   ),
                 ],
               ),

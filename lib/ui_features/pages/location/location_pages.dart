@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:nucleus_ui_app/config/config.dart';
 import 'package:nucleus_ui_app/ui_features/model/location_model.dart';
-import '../../../config/config.dart';
-import '../../widgets/appbar/appbar_primary.dart';
-import '../../widgets/input/input_custom.dart';
-import '../../widgets/location/location_item.dart';
+import 'package:nucleus_ui_app/ui_features/widgets/appbar/appbar_primary.dart';
+import 'package:nucleus_ui_app/ui_features/widgets/input/input_custom.dart';
+import 'package:nucleus_ui_app/ui_features/widgets/location/location_item.dart';
 
 class ChooseLocationPages extends StatefulWidget {
-  static const String locationPages = "locationPages";
+  static const String locationPages = 'locationPages';
   const ChooseLocationPages({
     super.key,
   });
@@ -20,8 +20,8 @@ class _ChooseLocationPagesState extends State<ChooseLocationPages> {
   final location = TextEditingController();
   final List<LocationModel> locations = [
     LocationModel(
-        name: "18th Street Brewery", address: "Oakley Avenue, Hammond, IN"),
-    LocationModel(name: "18th Avenue", address: "Brooklyn, NY"),
+        name: '18th Street Brewery', address: 'Oakley Avenue, Hammond, IN'),
+    LocationModel(name: '18th Avenue', address: 'Brooklyn, NY'),
   ];
 
   List<LocationModel> temp = [];
@@ -57,12 +57,12 @@ class _ChooseLocationPagesState extends State<ChooseLocationPages> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const Text(
-              "Find nearby shop",
+              'Find nearby shop',
               style: AssetStyles.t2,
             ),
             verticalSpace(10),
             const Text(
-              "Enter your location to find them.",
+              'Enter your location to find them.',
               style: AssetStyles.labelMdRegular,
             ),
             verticalSpace(30),
@@ -72,7 +72,7 @@ class _ChooseLocationPagesState extends State<ChooseLocationPages> {
                 AssetPaths.iconSearch,
                 fit: BoxFit.scaleDown,
               ),
-              hintText: "Find Location",
+              hintText: 'Find Location',
             ),
             verticalSpace(15),
             Flexible(
@@ -83,7 +83,7 @@ class _ChooseLocationPagesState extends State<ChooseLocationPages> {
                           LocationItem(data: temp[index]),
                     )
                   : const Center(
-                      child: Text("Data Tidak Ditemukan"),
+                      child: Text('Data Tidak Ditemukan'),
                     ),
             ),
           ],

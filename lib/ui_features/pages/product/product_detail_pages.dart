@@ -1,17 +1,16 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import '../../../config/config.dart';
-import '../../../ui_features/model/products_model.dart';
-import '../../../ui_features/model/sort_model.dart';
-import '../../../ui_features/widgets/appbar/appbar_primary.dart';
-import '../../../ui_features/widgets/button_primary.dart';
-
-import '../../widgets/product/indicator_image_product.dart';
-import '../../widgets/product/size_item_list.dart';
+import 'package:nucleus_ui_app/config/config.dart';
+import 'package:nucleus_ui_app/ui_features/model/products_model.dart';
+import 'package:nucleus_ui_app/ui_features/model/sort_model.dart';
+import 'package:nucleus_ui_app/ui_features/widgets/appbar/appbar_primary.dart';
+import 'package:nucleus_ui_app/ui_features/widgets/button_primary.dart';
+import 'package:nucleus_ui_app/ui_features/widgets/product/indicator_image_product.dart';
+import 'package:nucleus_ui_app/ui_features/widgets/product/size_item_list.dart';
 
 class ProductDetailPages extends StatefulWidget {
   const ProductDetailPages({super.key});
-  static const String productDetailPages = "productDetailPages";
+  static const String productDetailPages = 'productDetailPages';
 
   @override
   State<ProductDetailPages> createState() => _ProductDetailPagesState();
@@ -23,9 +22,9 @@ class _ProductDetailPagesState extends State<ProductDetailPages> {
 
   @override
   Widget build(BuildContext context) {
-    final Product product = Product(
-      namaProduk: "Nike Air Zoom Structure 23",
-      hargaProduk: "190,00",
+    final product = Product(
+      namaProduk: 'Nike Air Zoom Structure 23',
+      hargaProduk: '190,00',
       pilihanGambar: [
         'https://images.unsplash.com/photo-1520342868574-5fa3804e551c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6ff92caffcdd63681a35134a6770ed3b&auto=format&fit=crop&w=1951&q=80',
         'https://images.unsplash.com/photo-1522205408450-add114ad53fe?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=368f45b0888aeb0b7b08e3a1084d3ede&auto=format&fit=crop&w=1950&q=80',
@@ -40,12 +39,13 @@ class _ProductDetailPagesState extends State<ProductDetailPages> {
         Color(0XFFFF5247),
       ],
       pilihanUkuran: [
-        "M 4 / W 5.5",
-        "M 4.5 / W 6",
-        "M 5 / W 6.5",
+        'M 4 / W 5.5',
+        'M 4.5 / W 6',
+        'M 5 / W 6.5',
       ],
       deskripsiProduk:
-          "A favourite returns. Made for the runner looking for a shoe they can wear daily the Nike Air Zoom Quest Structure 23 keeps\n\n",
+          'A favourite returns. Made for the runner looking for a shoe they can'
+          ' wear daily the Nike Air Zoom Quest Structure 23 keeps\n\n',
     );
 
     final List<Widget> imageSliders = product.pilihanGambar
@@ -55,11 +55,12 @@ class _ProductDetailPagesState extends State<ProductDetailPages> {
             ))
         .toList();
 
-    final List<SortModel> sizes = List.generate(
+    final sizes = List<SortModel>.generate(
       product.pilihanUkuran.length,
       (index) => SortModel(
-          name: product.pilihanUkuran[index],
-          status: index == 1 ? true : false),
+        name: product.pilihanUkuran[index],
+        status: index == 1,
+      ),
     );
 
     return Scaffold(
@@ -122,7 +123,7 @@ class _ProductDetailPagesState extends State<ProductDetailPages> {
                           ),
                           verticalSpace(10),
                           Text(
-                            "\$ ${product.hargaProduk}",
+                            '\$ ${product.hargaProduk}',
                             style: AssetStyles.labelMdRegular.copyWith(
                               fontWeight: FontWeight.w500,
                             ),
@@ -145,13 +146,13 @@ class _ProductDetailPagesState extends State<ProductDetailPages> {
                             text: TextSpan(
                               children: [
                                 TextSpan(
-                                  text: "Color",
+                                  text: 'Color',
                                   style: AssetStyles.labelMdRegular.copyWith(
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
                                 const TextSpan(
-                                  text: " Gray",
+                                  text: ' Gray',
                                   style: AssetStyles.labelMdRegular,
                                 ),
                               ],
@@ -177,7 +178,7 @@ class _ProductDetailPagesState extends State<ProductDetailPages> {
                           ),
                           verticalSpace(20),
                           Text(
-                            "Size",
+                            'Size',
                             style: AssetStyles.labelMdRegular.copyWith(
                               fontWeight: FontWeight.bold,
                             ),
@@ -224,11 +225,11 @@ class _ProductDetailPagesState extends State<ProductDetailPages> {
               height: 50,
               child: ButtonPrimary(
                 onTap: () {
-                  print("OK");
+                  debugPrint('OK');
                 },
                 width: screenWidth(context) * 0.9,
                 color: AssetColors.inkDarkest,
-                text: "Add To Cart",
+                text: 'Add To Cart',
               ),
             ),
           )

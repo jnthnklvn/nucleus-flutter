@@ -1,7 +1,7 @@
-import "package:flutter/material.dart";
-import '../config/config.dart';
-import '../config/strings.dart';
-import './app_theme.dart';
+import 'package:flutter/material.dart';
+import 'package:nucleus_ui_app/app/app_theme.dart';
+import 'package:nucleus_ui_app/config/config.dart';
+import 'package:nucleus_ui_app/config/strings.dart';
 
 class App extends StatelessWidget {
   const App({super.key});

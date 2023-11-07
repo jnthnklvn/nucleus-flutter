@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import '../../../config/config.dart';
-import '../../../ui_features/widgets/button/button_icon_rounded.dart';
-import '../../../ui_features/widgets/button_primary.dart';
-import '../../widgets/cart/cart_detail.dart';
+import 'package:nucleus_ui_app/config/config.dart';
+import 'package:nucleus_ui_app/ui_features/widgets/button/button_icon_rounded.dart';
+import 'package:nucleus_ui_app/ui_features/widgets/button_primary.dart';
+import 'package:nucleus_ui_app/ui_features/widgets/cart/cart_detail.dart';
 
 class AddToCartPages extends StatelessWidget {
   const AddToCartPages({super.key});
-  static const String addToCartPages = "addToCartPages";
+  static const String addToCartPages = 'addToCartPages';
 
   @override
   Widget build(BuildContext context) {
@@ -72,25 +72,25 @@ class AddToCartPages extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            "Nike React Infinity Run\nFlyknit 2",
+                            'Nike React Infinity Run\nFlyknit 2',
                             style: AssetStyles.t3.copyWith(
                               height: 1.4,
                             ),
                           ),
                           verticalSpace(15),
                           const Text(
-                            "\$250.00 + Delivery & Tax",
+                            '\$250.00 + Delivery & Tax',
                             style: AssetStyles.labelSmReguler,
                           ),
                           verticalSpace(20),
-                          CartDetail(
-                            title: "Size",
-                            caption: "M 10 / W 11.5",
+                          const CartDetail(
+                            title: 'Size',
+                            caption: 'M 10 / W 11.5',
                           ),
                           verticalSpace(20),
-                          CartDetail(
-                            title: "Color",
-                            caption: "Gray",
+                          const CartDetail(
+                            title: 'Color',
+                            caption: 'Gray',
                           ),
                         ],
                       ),
@@ -100,7 +100,7 @@ class AddToCartPages extends StatelessWidget {
                     margin: const EdgeInsets.all(20),
                     child: ButtonPrimary(
                       onTap: () {},
-                      text: "Buy",
+                      text: 'Buy',
                       height: 50,
                       color: AssetColors.inkDarkest,
                       width: screenWidth(context) * 0.9,

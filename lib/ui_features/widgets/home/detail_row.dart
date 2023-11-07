@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../../config/config.dart';
+import 'package:nucleus_ui_app/config/config.dart';
 
 class DetailRow extends StatelessWidget {
   final String? title;

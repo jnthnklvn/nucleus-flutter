@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import '../../../config/config.dart';
-import '../../../ui_features/model/place_model.dart';
+import 'package:nucleus_ui_app/config/config.dart';
+import 'package:nucleus_ui_app/ui_features/model/place_model.dart';
 
 class PlaceItem extends StatelessWidget {
   const PlaceItem({
-    super.key,
-    required this.places,
+    required this.places, super.key,
   });
 
   final Place places;
@@ -62,13 +61,13 @@ class PlaceItem extends StatelessWidget {
                   RichText(
                     text: TextSpan(children: [
                       TextSpan(
-                        text: "\$${places.price}",
+                        text: '\$${places.price}',
                         style: AssetStyles.labelMdRegular.copyWith(
                           fontWeight: FontWeight.bold,
                         ),
                       ),
                       TextSpan(
-                        text: "/${places.time}",
+                        text: '/${places.time}',
                         style: AssetStyles.labelSmReguler,
                       ),
                     ]),
@@ -78,7 +77,7 @@ class PlaceItem extends StatelessWidget {
                       SvgPicture.asset(AssetPaths.iconRating),
                       horizontalSpace(5),
                       Text(
-                        "${places.rating}",
+                        '${places.rating}',
                         style: AssetStyles.labelMdMdReg.copyWith(
                           fontWeight: FontWeight.bold,
                           color: AssetColors.inkDarkest,

@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import '../../../config/config.dart';
-import '../../model/search_model.dart';
+import 'package:nucleus_ui_app/config/config.dart';
+import 'package:nucleus_ui_app/ui_features/model/search_model.dart';
 
 class SeachResultItem extends StatelessWidget {
   final Search data;
   const SeachResultItem({
-    super.key,
-    required this.data,
+    required this.data, super.key,
   });
 
   @override
@@ -44,7 +43,7 @@ class SeachResultItem extends StatelessWidget {
                     children: [
                       ...data.position.map(
                         (pos) => TextSpan(
-                          text: "${pos.name}, ",
+                          text: '${pos.name}, ',
                           style: AssetStyles.labelSmReguler.copyWith(
                             color: AssetColors.inkLighter,
                           ),

@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import '../../../config/config.dart';
+import 'package:nucleus_ui_app/config/config.dart';
 
 class ButtonTwoListItem extends StatelessWidget {
   final String title;
   final String? subTitle;
-  final Function() onTap;
+  final VoidCallback onTap;
   const ButtonTwoListItem({
-    super.key,
     required this.title,
-    this.subTitle,
     required this.onTap,
+    super.key,
+    this.subTitle,
   });
 
   @override

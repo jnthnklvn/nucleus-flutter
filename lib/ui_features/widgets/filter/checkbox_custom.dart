@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import '../../../config/config.dart';
+import 'package:nucleus_ui_app/config/config.dart';
 
 class CheckBoxCustom extends StatelessWidget {
-  final Function(bool?)? onChange;
+  final ValueChanged<bool?>? onChange;
   final String? text;
   const CheckBoxCustom({
-    super.key,
     required this.isChecked,
+    super.key,
     this.onChange,
     this.text,
   });

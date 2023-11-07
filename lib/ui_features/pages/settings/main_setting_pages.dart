@@ -1,22 +1,22 @@
 import 'package:flutter/material.dart';
-import '../../../config/config.dart';
-import '../../../ui_features/model/navbar_model.dart';
-import '../../../ui_features/widgets/button_primary.dart';
-import '../../../ui_features/widgets/settings/button_setting_item_no_icon.dart';
-import '../../widgets/navbar/navbar_custom1.dart';
-import '../../widgets/settings/button_setting_item.dart';
+import 'package:nucleus_ui_app/config/config.dart';
+import 'package:nucleus_ui_app/ui_features/model/navbar_model.dart';
+import 'package:nucleus_ui_app/ui_features/widgets/button_primary.dart';
+import 'package:nucleus_ui_app/ui_features/widgets/navbar/navbar_custom1.dart';
+import 'package:nucleus_ui_app/ui_features/widgets/settings/button_setting_item.dart';
+import 'package:nucleus_ui_app/ui_features/widgets/settings/button_setting_item_no_icon.dart';
 
 class MainSettingPages extends StatelessWidget {
   const MainSettingPages({super.key});
-  static const String mainSettingPages = "mainSettingPages";
+  static const String mainSettingPages = 'mainSettingPages';
 
   @override
   Widget build(BuildContext context) {
-    final List<NavbarModel> navbars = [
-      NavbarModel(icon: "", title: "", status: false),
-      NavbarModel(icon: "", title: "", status: false),
-      NavbarModel(icon: "", title: "", status: false),
-      NavbarModel(icon: "", title: "", status: true),
+    final navbars = <NavbarModel>[
+      NavbarModel(icon: '', title: '', status: false),
+      NavbarModel(icon: '', title: '', status: false),
+      NavbarModel(icon: '', title: '', status: false),
+      NavbarModel(icon: '', title: '', status: true),
     ];
     return Scaffold(
       body: SafeArea(
@@ -45,12 +45,12 @@ class MainSettingPages extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             const Text(
-                              "William",
+                              'William',
                               style: AssetStyles.t3,
                             ),
                             verticalSpace(5),
                             const Text(
-                              "william@studioalva.co",
+                              'william@studioalva.co',
                               style: AssetStyles.labelMdRegular,
                             ),
                           ],
@@ -66,21 +66,21 @@ class MainSettingPages extends StatelessWidget {
                       style: AssetStyles.labelMdRegular.copyWith(
                         color: AssetColors.primaryBase,
                       ),
-                      text: "View Profile",
+                      text: 'View Profile',
                     ),
                     verticalSpace(20),
                     ButtonSetiingItem(
                       icon: AssetPaths.iconPlace,
-                      text: "Address",
+                      text: 'Address',
                       prefixIcon: Container(),
                       onTap: () {
-                        print("Hello Address");
+                        debugPrint('Hello Address');
                       },
                     ),
                     verticalSpace(10),
                     ButtonSetiingItem(
                       icon: AssetPaths.iconPayment,
-                      text: "Payment Method",
+                      text: 'Payment Method',
                       prefixIcon: Container(),
                       onTap: () {},
                     ),
@@ -88,26 +88,26 @@ class MainSettingPages extends StatelessWidget {
                     ButtonSetiingItem(
                       icon: AssetPaths.iconHelp,
                       prefixIcon: Container(),
-                      text: "Help",
+                      text: 'Help',
                       onTap: () {},
                     ),
                     verticalSpace(10),
                     ButtonSetiingItem(
                       icon: AssetPaths.iconSettings,
                       prefixIcon: Container(),
-                      text: "Settings",
+                      text: 'Settings',
                       onTap: () {},
                     ),
                     verticalSpace(10),
                     const Divider(),
                     verticalSpace(10),
                     ButtonSettingItemNoIcon(
-                      text: "About",
+                      text: 'About',
                       onTap: () {},
                     ),
                     verticalSpace(10),
                     ButtonSettingItemNoIcon(
-                      text: "Logout",
+                      text: 'Logout',
                       onTap: () {},
                     ),
                   ],

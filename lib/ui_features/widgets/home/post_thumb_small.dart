@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import '../../../ui_features/model/posts_model.dart';
-import '../../../config/config.dart';
+import 'package:nucleus_ui_app/config/config.dart';
+import 'package:nucleus_ui_app/ui_features/model/posts_model.dart';
 
 class PostThumbSmall extends StatelessWidget {
   final Posts data;
   const PostThumbSmall({
-    super.key,
     required this.data,
+    super.key,
   });
 
   @override
@@ -42,7 +42,7 @@ class PostThumbSmall extends StatelessWidget {
                   ),
                   verticalSpace(10),
                   Text(
-                    "${data.time} · by ${data.authors}",
+                    '${data.time} · by ${data.authors}',
                     style: AssetStyles.labelTinyReguler.copyWith(
                       color: AssetColors.inkLight,
                     ),

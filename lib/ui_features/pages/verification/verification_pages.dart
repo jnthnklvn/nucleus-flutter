@@ -1,28 +1,28 @@
 import 'package:flutter/material.dart';
-import '../../../config/config.dart';
-import '../../../ui_features/widgets/appbar/appbar_primary.dart';
-import '../../../ui_features/widgets/button_primary.dart';
-import '../../../ui_features/widgets/text_button.dart';
-import '../../widgets/input/input_rounded.dart';
+import 'package:nucleus_ui_app/config/config.dart';
+import 'package:nucleus_ui_app/ui_features/widgets/appbar/appbar_primary.dart';
+import 'package:nucleus_ui_app/ui_features/widgets/button_primary.dart';
+import 'package:nucleus_ui_app/ui_features/widgets/input/input_rounded.dart';
+import 'package:nucleus_ui_app/ui_features/widgets/text_button.dart';
 
 class VerificationPages extends StatelessWidget {
-  static const String verificationPages = "verificationPages";
+  static const String verificationPages = 'verificationPages';
   const VerificationPages({super.key});
 
   @override
   Widget build(BuildContext context) {
-    TextEditingController v1 = TextEditingController();
-    TextEditingController v2 = TextEditingController();
-    TextEditingController v3 = TextEditingController();
-    TextEditingController v4 = TextEditingController();
-    List<FocusNode> listFocus = [
+    final v1 = TextEditingController();
+    final v2 = TextEditingController();
+    final v3 = TextEditingController();
+    final v4 = TextEditingController();
+    final listFocus = <FocusNode>[
       FocusNode(),
       FocusNode(),
       FocusNode(),
       FocusNode(),
     ];
 
-    List<TextEditingController> controller = [
+    final controller = <TextEditingController>[
       v1,
       v2,
       v3,
@@ -35,7 +35,7 @@ class VerificationPages extends StatelessWidget {
           Container(
             margin: const EdgeInsets.only(top: 20, right: 20),
             child: TextButtonCustom(
-              text: "Change Number",
+              text: 'Change Number',
               onTap: () {},
             ),
           ),
@@ -51,7 +51,7 @@ class VerificationPages extends StatelessWidget {
               child: Column(
                 children: [
                   const Text(
-                    "Enter authentication code",
+                    'Enter authentication code',
                     style: AssetStyles.t3,
                   ),
                   verticalSpace(10),
@@ -60,12 +60,12 @@ class VerificationPages extends StatelessWidget {
                     text: TextSpan(
                       children: [
                         const TextSpan(
-                          text:
-                              "Enter the 4-digit that we have sent via the phone number ",
+                          text: 'Enter the 4-digit that we have sent via the '
+                              'phone number ',
                           style: AssetStyles.labelMdRegular,
                         ),
                         TextSpan(
-                          text: "+62 813-8172-5977",
+                          text: '+62 813-8172-5977',
                           style: AssetStyles.labelMdRegular.copyWith(
                             fontWeight: FontWeight.bold,
                           ),
@@ -92,7 +92,7 @@ class VerificationPages extends StatelessWidget {
             ),
             ButtonPrimary(
               width: screenWidth(context) * 0.8,
-              text: "Continue",
+              text: 'Continue',
               color: AssetColors.skyLight,
               style: AssetStyles.labelMdRegular.copyWith(
                 color: AssetColors.skyDark,
@@ -103,7 +103,7 @@ class VerificationPages extends StatelessWidget {
             verticalSpace(20),
             TextButtonCustom(
               onTap: () {},
-              text: "Resend Code",
+              text: 'Resend Code',
             ),
             verticalSpace(20),
           ],
