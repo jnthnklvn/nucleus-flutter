@@ -5,7 +5,8 @@ import 'package:nucleus_ui_app/ui_features/model/location_model.dart';
 
 class LocationItem extends StatelessWidget {
   const LocationItem({
-    required this.data, super.key,
+    required this.data,
+    super.key,
   });
 
   final LocationModel data;
@@ -24,27 +25,29 @@ class LocationItem extends StatelessWidget {
           children: [
             SvgPicture.asset(AssetPaths.iconPlace),
             horizontalSpace(20),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  data.name,
-                  style: AssetStyles.labelMdRegular,
-                ),
-                verticalSpace(5),
-                Text(
-                  data.address,
-                  style: AssetStyles.labelMdRegular.copyWith(
-                    color: AssetColors.inkLighter,
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    data.name,
+                    style: AssetStyles.labelMdRegular,
                   ),
-                ),
-                verticalSpace(10),
-                Container(
-                  width: screenWidth(context) * 0.8,
-                  height: 2,
-                  color: AssetColors.skyLight,
-                )
-              ],
+                  verticalSpace(5),
+                  Text(
+                    data.address,
+                    style: AssetStyles.labelMdRegular.copyWith(
+                      color: AssetColors.inkLighter,
+                    ),
+                  ),
+                  verticalSpace(10),
+                  Container(
+                    width: screenWidth(context) * 0.8,
+                    height: 2,
+                    color: AssetColors.skyLight,
+                  )
+                ],
+              ),
             ),
           ],
         ),
